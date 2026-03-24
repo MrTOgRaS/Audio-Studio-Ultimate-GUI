@@ -262,7 +262,6 @@ Tam lisans metni için [LICENSE](LICENSE) dosyasına bakın.
 
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Donate-orange?style=for-the-badge&logo=buy-me-a-coffee)](https://www.buymeacoffee.com/MrTOgRaS)
 
-</div>
 
 
 **Powered By MrTOgRaS**
