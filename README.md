@@ -190,12 +190,6 @@ SOFTWARE.
 
 ---
 
-### 📸 Ekran Görüntüleri
-
-> *Ekran görüntüleri buraya eklenecektir.*
-
----
-
 ### 🧰 Gerekli Araçlar
 
 > ⚠️ **Önemli:** Aşağıdaki araçlar uygulama ile birlikte **gelmemektedir**. Her birini ayrı ayrı indirmeniz gerekmektedir. Araçları sistem `PATH`'inize ekleyin veya uygulama içindeki **Ayarlar** panelinden yollarını yapılandırın.
