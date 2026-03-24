@@ -64,9 +64,9 @@ Built on **Electron 41** and **React 19**, it provides a responsive, native-feel
 
 <!--
 <p align="center">
-  <img src="https://raw.githubusercontent.com/MrTOgRaS/Audio-Studio-Ultimate-GUI/3da084137b41b012823eb5d391cb14a6a3a6fced/main.png" alt="Main Window" width="400" />
+  <img src="docs/screenshots/main.png" alt="Main Window" width="400" />
   &nbsp;&nbsp;
-  <img src="https://raw.githubusercontent.com/MrTOgRaS/Audio-Studio-Ultimate-GUI/3da084137b41b012823eb5d391cb14a6a3a6fced/encode.png" alt="Encode Panel" width="400" />
+  <img src="docs/screenshots/encode.png" alt="Encode Panel" width="400" />
 </p>
 -->
 
