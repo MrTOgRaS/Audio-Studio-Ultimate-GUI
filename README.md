@@ -151,7 +151,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
-
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Donate-orange?style=for-the-badge&logo=buy-me-a-coffee)](https://www.buymeacoffee.com/MrTOgRaS)
 ---
 
 <a name="türkçe"></a>
@@ -253,8 +253,14 @@ MIT License — Copyright (c) 2026 Murat Oğraş
 Tam lisans metni için [LICENSE](LICENSE) dosyasına bakın.
 
 ---
-
-<div align="center">
+<p align="center">
+  <a href="https://www.buymeacoffee.com/MrTOgRaS">
+    <img src="https://img.shields.io/badge/Buy%20Me%20A%20Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" alt="Buy Me A Coffee">
+  </a>
+  <a href="https://www.buymeacoffee.com/MrTOgRaS">
+    <img src="https://img.shields.io/badge/Donate-FF5F5F?style=for-the-badge&logo=github-sponsors&logoColor=white" alt="Donate">
+  </a>
+</p>
 
 **Powered By MrTOgRaS**
 
