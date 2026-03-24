@@ -34,9 +34,6 @@
 
 Built on **Electron 41** and **React 19**, it provides a responsive, native-feeling experience on Windows while orchestrating industry-standard engines (DEEW, DeeZy, eac3to, FFmpeg) behind the scenes.
 
-> **Developer:** [Murat Oğraş](https://www.mrtogras.com) — [destek@mrtogras.com](mailto:destek@mrtogras.com)
->
-> **Website:** [www.mrtogras.com](https://www.mrtogras.com)
 
 ---
 
@@ -170,10 +167,6 @@ SOFTWARE.
 
 **Electron 41** ve **React 19** üzerine inşa edilmiş olup, DEEW, DeeZy, eac3to ve FFmpeg gibi endüstri standardı motorları arka planda yönetirken Windows üzerinde hızlı ve doğal bir deneyim sunar.
 
-> **Geliştirici:** [Murat Oğraş](https://www.mrtogras.com) — [destek@mrtogras.com](mailto:destek@mrtogras.com)
->
-> **Web sitesi:** [www.mrtogras.com](https://www.mrtogras.com)
-
 ---
 
 ### ✨ Özellikler
@@ -272,6 +265,6 @@ Tam lisans metni için [LICENSE](LICENSE) dosyasına bakın.
 
 <div align="center">
 
-**Powered By MrTOgRaS** | [www.mrtogras.com](https://www.mrtogras.com)
+**Powered By MrTOgRaS**
 
 </div>
