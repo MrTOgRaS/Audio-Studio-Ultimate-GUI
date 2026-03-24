@@ -91,7 +91,7 @@ Built on **Electron 41** and **React 19**, it provides a responsive, native-feel
 | **dovi_tool** | [GitHub Releases](https://github.com/quietvoid/dovi_tool/releases) | MIT |
 | **hdr10plus_tool** | [GitHub Releases](https://github.com/quietvoid/hdr10plus_tool/releases) | MIT |
 | **tsMuxeR** | [GitHub Releases](https://github.com/justdan96/tsMuxer/releases) | Apache 2.0 |
-| **truehdd** | [GitHub Releases](https://github.com/truehdd/truehdd | Apache 2.0 |
+| **truehdd** | [GitHub Releases](https://github.com/truehdd/truehdd) | Apache 2.0 |
 | **Apple CoreAudioToolbox** | Install [iTunes](https://www.apple.com/itunes/) or Apple Application Support | Apple EULA |
 | **[Dolby Encoding Engine (Buy)](https://professionalsupport.dolby.com/s/topic/0TO4u000000ey3AGAQ/dolby-encoding-engine-dee?language=en_US)** | [Dolby Professional Support](https://professionalsupport.dolby.com/s/topic/0TO4u000000ey3AGAQ/dolby-encoding-engine-dee?language=en_US) | 💰 Commercial |
 
@@ -215,7 +215,7 @@ SOFTWARE.
 | **dovi_tool** | [GitHub Releases](https://github.com/quietvoid/dovi_tool/releases) | MIT |
 | **hdr10plus_tool** | [GitHub Releases](https://github.com/quietvoid/hdr10plus_tool/releases) | MIT |
 | **tsMuxeR** | [GitHub Releases](https://github.com/justdan96/tsMuxer/releases) | Apache 2.0 |
-| **truehdd** | [GitHub Releases](https://github.com/truehdd/truehdd | Apache 2.0 |
+| **truehdd** | [GitHub Releases](https://github.com/truehdd/truehdd) | Apache 2.0 |
 | **Apple CoreAudioToolbox** | [iTunes](https://www.apple.com/itunes/) veya Apple Application Support yükleyin | Apple EULA |
 | **[Dolby Encoding Engine (Satın Al)](https://professionalsupport.dolby.com/s/topic/0TO4u000000ey3AGAQ/dolby-encoding-engine-dee?language=en_US)** | [Dolby Professional Support](https://professionalsupport.dolby.com/s/topic/0TO4u000000ey3AGAQ/dolby-encoding-engine-dee?language=en_US) | 💰 Ticari |
 
