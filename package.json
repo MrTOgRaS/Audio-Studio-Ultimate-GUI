@@ -1,0 +1,50 @@
+{
+  "name": "audio-studio-ultimate",
+  "version": "1.0.0",
+  "private": true,
+  "author": "Murat Ogras",
+  "description": "Audio Studio Ultimate GUI - Professional Audio Processing Tools",
+  "main": "public/electron.js",
+  "homepage": "./",
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^5.1.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.0",
+    "electron": "^41.0.0",
+    "electron-builder": "^25.0.0",
+    "wait-on": "^8.0.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "electron-dev": "concurrently \"npm start\" \"wait-on http://localhost:3000 && electron .\"",
+    "dist": "npm run build && electron-builder"
+  },
+  "build": {
+    "appId": "com.muratogras.audiostudio",
+    "productName": "Audio Studio Ultimate GUI",
+    "directories": {
+      "output": "release"
+    },
+    "win": {
+      "target": ["nsis", "dir"],
+      "icon": "public/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "public/icon.ico",
+      "uninstallerIcon": "public/icon.ico",
+      "installerHeaderIcon": "public/icon.ico",
+      "artifactName": "Audio Studio Ultimate Setup ${version}.${ext}"
+    }
+  },
+  "browserslist": {
+    "production": [">0.2%", "not dead", "not op_mini all"],
+    "development": ["last 1 chrome version", "last 1 firefox version", "last 1 safari version"]
+  }
+}
