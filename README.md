@@ -63,8 +63,6 @@ Built on **Electron 41** and **React 19**, it provides a responsive, native-feel
 
 ### 📸 Screenshots
 
-> *Screenshots will be added here.*
-
 <p align="center">
   <img src="main.png" alt="Main Window" width="400" />
   &nbsp;&nbsp;
