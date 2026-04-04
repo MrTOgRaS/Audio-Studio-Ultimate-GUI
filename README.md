@@ -89,7 +89,7 @@ Built on **Electron 41** and **React 19**, it provides a responsive, native-feel
 | **DeeZy** | [GitHub](https://github.com/Draz1l/DeeZy) | GPL v3 |
 | **DGDemux** | [Official Site](https://www.rationalqm.us/dgdemux/dgdemux.html) | Freeware |
 | **MediaInfo** | [Official Downloads](https://mediaarea.net/en/MediaInfo/Download) | BSD |
-| **DTS Master Audio Suite** *(DTSEncoder.jar)* | DTS Professional | Commercial |
+| **DTS Master Audio Suite** *(DTSEncoder.jar)* | DTS Professional | 💰 Commercial |
 | **dovi_tool** | [GitHub Releases](https://github.com/quietvoid/dovi_tool/releases) | MIT |
 | **hdr10plus_tool** | [GitHub Releases](https://github.com/quietvoid/hdr10plus_tool/releases) | MIT |
 | **tsMuxeR** | [GitHub Releases](https://github.com/justdan96/tsMuxer/releases) | Apache 2.0 |
@@ -233,7 +233,7 @@ SOFTWARE.
 | **DeeZy** | [GitHub](https://github.com/Draz1l/DeeZy) | GPL v3 |
 | **DGDemux** | [Resmi Site](https://www.rationalqm.us/dgdemux/dgdemux.html) | Ücretsiz |
 | **MediaInfo** | [Resmi İndirmeler](https://mediaarea.net/en/MediaInfo/Download) | BSD |
-| **DTS Master Audio Suite** *(DTSEncoder.jar)* | DTS Professional | Ticari |
+| **DTS Master Audio Suite** *(DTSEncoder.jar)* | DTS Professional | 💰 Ticari |
 | **dovi_tool** | [GitHub Releases](https://github.com/quietvoid/dovi_tool/releases) | MIT |
 | **hdr10plus_tool** | [GitHub Releases](https://github.com/quietvoid/hdr10plus_tool/releases) | MIT |
 | **tsMuxeR** | [GitHub Releases](https://github.com/justdan96/tsMuxer/releases) | Apache 2.0 |
