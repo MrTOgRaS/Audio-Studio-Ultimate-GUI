@@ -255,48 +255,6 @@ SOFTWARE.
 
 ---
 
-### 💻 Kurulum
-
-**Ön Koşullar:**
-- Windows 10 / 11
-- [Node.js](https://nodejs.org/) (LTS önerilir)
-
-```bash
-git clone https://github.com/MrTOgRaS/Audio-Studio-Ultimate-GUI.git
-cd Audio-Studio-Ultimate-GUI
-npm install
-```
-
-### ▶️ Geliştirme
-
-```bash
-npm start            # Geliştirme modunda çalıştır
-```
-
-### 🏗️ Derleme
-
-```bash
-npm run build        # React uygulamasını derle
-npm run dist         # Electron yükleyici + taşınabilir sürüm oluştur
-```
-
-| Çıktı | Yol |
-|---|---|
-| 📦 Taşınabilir | `dist/Audio Studio Ultimate Portable 1.1.exe` |
-| 💿 Yükleyici | `dist/Audio Studio Ultimate Setup 1.1.exe` |
-| 📄 Güncelleme dosyası | `dist/latest.yml` |
-
-### 🚀 GitHub Releases'a Yükleme
-
-```bash
-set GH_TOKEN=ghp_xxxxxxxxxxxx
-npm run dist -- --publish always
-```
-
-Bu komut uygulamayı derler ve Setup, Portable ile `latest.yml` dosyalarını otomatik olarak GitHub Releases'a yükler. Uygulama içi güncelleme sistemi yeni sürümleri tespit etmek için `latest.yml` dosyasını kullanır.
-
----
-
 ### 📄 Lisans
 
 ```
