@@ -1,12 +1,13 @@
 {
   "name": "audio-studio-ultimate",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "author": "Murat Ogras",
   "description": "Audio Studio Ultimate GUI - Professional Audio Processing Tools",
   "main": "public/electron.js",
   "homepage": "./",
   "dependencies": {
+    "electron-updater": "^6.3.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-scripts": "5.0.1",
@@ -22,16 +23,20 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "electron-dev": "concurrently \"npm start\" \"wait-on http://localhost:3000 && electron .\"",
-    "dist": "npm run build && electron-builder"
+    "dist": "npm run build && electron-builder",
+    "dist:setup": "npm run build && electron-builder --win nsis",
+    "dist:portable": "npm run build && electron-builder --win portable",
+    "dist:all": "npm run build && electron-builder --win nsis portable"
   },
   "build": {
     "appId": "com.muratogras.audiostudio",
     "productName": "Audio Studio Ultimate GUI",
+    "copyright": "Copyright © 2026 Murat Oğraş",
     "directories": {
       "output": "release"
     },
     "win": {
-      "target": ["nsis", "dir"],
+      "target": ["nsis", "portable"],
       "icon": "public/icon.ico"
     },
     "nsis": {
@@ -40,8 +45,30 @@
       "installerIcon": "public/icon.ico",
       "uninstallerIcon": "public/icon.ico",
       "installerHeaderIcon": "public/icon.ico",
-      "artifactName": "Audio Studio Ultimate Setup ${version}.${ext}"
-    }
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Audio Studio Ultimate",
+      "artifactName": "Audio Studio Ultimate Setup 1.1.${ext}"
+    },
+    "portable": {
+      "artifactName": "Audio Studio Ultimate Portable 1.1.${ext}",
+      "requestExecutionLevel": "user"
+    },
+    "publish": [{
+      "provider": "github",
+      "owner": "MrTOgRaS",
+      "repo": "Audio-Studio-Ultimate-GUI"
+    }],
+    "extraResources": [
+      {
+        "from": "public/icon.ico",
+        "to": "icon.ico"
+      },
+      {
+        "from": "public/icon.png",
+        "to": "icon.png"
+      }
+    ]
   },
   "browserslist": {
     "production": [">0.2%", "not dead", "not op_mini all"],
