@@ -3,9 +3,20 @@ const path = require("path");
 const fs = require("fs");
 const { exec, spawn } = require("child_process");
 
+const APP_VERSION = "1.1";
+let autoUpdater;try{autoUpdater=require("electron-updater").autoUpdater;autoUpdater.autoDownload=false;autoUpdater.autoInstallOnAppQuit=true}catch(e){autoUpdater=null}
 let mainWindow;
 const settingsPath = path.join(app.getPath("userData"), "settings.json");
-const DEFAULT_TOOLS = {TOOL_PATH:"eac3to.exe",QAAC_PATH:"qaac64.exe",FFMPEG_PATH:"ffmpeg.exe",FFPROBE_PATH:"ffprobe.exe",DEEW_PATH:"deew.exe",DEEZY_PATH:"deezy.exe",DGDEMUX_PATH:"DGDemux.exe",MKVEXTRACT_PATH:"mkvextract.exe",MKVMERGE_PATH:"mkvmerge.exe",Truehdd_PATH:"truehdd.exe",THDMerge_PATH:"thdmerge.exe",Dovi_Tool_PATH:"dovi_tool.exe",MediaInfo_PATH:"MediaInfo.exe",HDR10Plus_PATH:"hdr10plus_tool.exe",AtmosFix_PATH:"eac3_7.1_atmos_fix.exe",Tsmuxer_PATH:"tsmuxer.exe",DEE_PATH:"dee.exe",AudioSuite:"C:\\Audio Tools Suite\\Atmos\\binaries"};
+const DEFAULT_TOOLS = {TOOL_PATH:"eac3to.exe",QAAC_PATH:"qaac64.exe",FFMPEG_PATH:"ffmpeg.exe",FFPROBE_PATH:"ffprobe.exe",DEEW_PATH:"deew.exe",DEEZY_PATH:"deezy.exe",DGDEMUX_PATH:"DGDemux.exe",MKVEXTRACT_PATH:"mkvextract.exe",MKVMERGE_PATH:"mkvmerge.exe",Truehdd_PATH:"truehdd.exe",THDMerge_PATH:"thdmerge.exe",Dovi_Tool_PATH:"dovi_tool.exe",MediaInfo_PATH:"MediaInfo.exe",HDR10Plus_PATH:"hdr10plus_tool.exe",AtmosFix_PATH:"eac3_7.1_atmos_fix.exe",Tsmuxer_PATH:"tsmuxer.exe",DEE_PATH:"dee.exe",DTSEncoder_PATH:"DTSEncoder.jar",AudioSuite:"C:\\Audio Tools Suite\\Atmos\\binaries"};
+
+// Icon: works in dev (__dirname/icon.ico) and packaged (resourcesPath/icon.ico)
+function getIconPath(){
+  const devIcon=path.join(__dirname,"icon.ico");
+  if(fs.existsSync(devIcon))return devIcon;
+  const resIcon=path.join(process.resourcesPath,"icon.ico");
+  if(fs.existsSync(resIcon))return resIcon;
+  return devIcon;
+}
 
 function readSettings(){try{if(fs.existsSync(settingsPath)){const s=JSON.parse(fs.readFileSync(settingsPath,"utf-8")).tools||{};return{...DEFAULT_TOOLS,...s}};}catch(e){}return{...DEFAULT_TOOLS}}
 function writeSettings(tools){try{fs.writeFileSync(settingsPath,JSON.stringify({tools},null,2),"utf-8");return true}catch(e){return false}}
@@ -13,14 +24,14 @@ function findExeInDir(dir,exeName){try{if(!fs.existsSync(dir))return null;const 
 function resolveToolPath(toolKey){const tools=readSettings();const sp=tools[toolKey];if(sp&&path.isAbsolute(sp)&&fs.existsSync(sp))return sp;const as=tools.AudioSuite;if(as&&fs.existsSync(as)){const bn=path.basename(sp||toolKey.replace("_PATH","")+".exe");const f=findExeInDir(as,bn);if(f)return f}return sp||toolKey}
 
 function createWindow(){
-  mainWindow=new BrowserWindow({width:1300,height:850,minWidth:900,minHeight:600,title:"Audio Studio Ultimate GUI v1.0",backgroundColor:"#0c0e1a",
-    icon:path.join(__dirname,"icon.ico"),
+  mainWindow=new BrowserWindow({width:1300,height:850,minWidth:900,minHeight:600,title:`Audio Studio Ultimate GUI v${APP_VERSION}`,backgroundColor:"#0c0e1a",
+    icon:getIconPath(),
     webPreferences:{nodeIntegration:false,contextIsolation:true,preload:path.join(__dirname,"preload.js")}});
   mainWindow.loadFile(path.join(__dirname,"..","build","index.html"));
   mainWindow.setMenuBarVisibility(false);
   // FIX#5: React App yerine doğru başlık
   mainWindow.on("page-title-updated",(e)=>{e.preventDefault()});
-  mainWindow.setTitle("Audio Studio Ultimate GUI v1.0");
+  mainWindow.setTitle(`Audio Studio Ultimate GUI v${APP_VERSION}`);
 }
 
 ipcMain.handle("get-settings",()=>readSettings());
@@ -32,6 +43,12 @@ ipcMain.handle("select-file",async(e,o)=>{const r=await dialog.showOpenDialog(ma
 ipcMain.handle("select-media-file",async()=>{const r=await dialog.showOpenDialog(mainWindow,{properties:["openFile"],filters:[{name:"Ses/Video",extensions:["mkv","mp4","avi","mov","ts","m2ts","mpls","ac3","ec3","eac3","dts","dtshd","thd","truehd","flac","wav","w64","aac","m4a","mp3","mp2","opus","ogg","wma","dat","vob"]},{name:"Tüm",extensions:["*"]}]});return r.canceled?null:r.filePaths[0]});
 ipcMain.handle("select-folder",async()=>{const r=await dialog.showOpenDialog(mainWindow,{properties:["openDirectory"]});return r.canceled?null:r.filePaths[0]});
 ipcMain.handle("select-multiple-files",async()=>{const r=await dialog.showOpenDialog(mainWindow,{properties:["openFile","multiSelections"],filters:[{name:"Ses/Video",extensions:["mkv","mp4","avi","mov","ts","m2ts","dat","ac3","ec3","dts","thd","flac","wav","mp2","mp3","vob"]},{name:"Tüm",extensions:["*"]}]});return r.canceled?null:r.filePaths});
+ipcMain.handle("check-update",async(e,url)=>{try{const https=require("https");return new Promise((resolve)=>{https.get(url,{headers:{"User-Agent":"AudioStudioUltimate"}},res=>{let d="";res.on("data",c=>d+=c);res.on("end",()=>{try{resolve({success:true,data:JSON.parse(d)})}catch(e2){resolve({success:false,error:"parse error"})}})}).on("error",err=>resolve({success:false,error:err.message}))})}catch(e2){return{success:false,error:e2.message}}});
+
+// ═══ AUTO-UPDATE (electron-updater) ═══
+ipcMain.handle("auto-update-check",async()=>{if(!autoUpdater)return{error:"not available"};try{const r=await autoUpdater.checkForUpdates();return{success:true,version:r?.updateInfo?.version}}catch(e){return{error:e.message}}});
+ipcMain.handle("auto-update-download",async()=>{if(!autoUpdater)return{error:"not available"};try{await autoUpdater.downloadUpdate();return{success:true}}catch(e){return{error:e.message}}});
+ipcMain.handle("auto-update-install",()=>{if(autoUpdater)autoUpdater.quitAndInstall(false,true)});
 
 // ═══ PROCESS TRACKING (İPTAL İÇİN) ═══
 const activeProcesses = new Map();
@@ -121,6 +138,11 @@ ipcMain.handle("open-folder",(e,fp)=>{require("electron").shell.openPath(fp)});
 ipcMain.handle("mkdir",(e,fp)=>{try{if(!fs.existsSync(fp))fs.mkdirSync(fp,{recursive:true});return true}catch(e){return false}});
 ipcMain.handle("open-terminal",(e,cwd)=>{exec(`start cmd /k "cd /d "${cwd}""`,{shell:true})});
 
-app.whenReady().then(createWindow);
-app.on("window-all-closed",()=>app.quit());
-app.on("activate",()=>{if(BrowserWindow.getAllWindows().length===0)createWindow()});
+// Single instance lock — only one window at a time
+const gotTheLock = app.requestSingleInstanceLock();
+if (!gotTheLock) { app.quit(); } else {
+  app.on("second-instance", () => { if (mainWindow) { if (mainWindow.isMinimized()) mainWindow.restore(); mainWindow.focus(); } });
+  app.whenReady().then(()=>{createWindow();if(autoUpdater){autoUpdater.on("update-available",info=>{if(mainWindow)mainWindow.webContents.send("auto-update-status",{status:"available",version:info.version})});autoUpdater.on("update-not-available",()=>{if(mainWindow)mainWindow.webContents.send("auto-update-status",{status:"latest"})});autoUpdater.on("download-progress",p=>{if(mainWindow)mainWindow.webContents.send("auto-update-status",{status:"downloading",percent:Math.round(p.percent)})});autoUpdater.on("update-downloaded",()=>{if(mainWindow)mainWindow.webContents.send("auto-update-status",{status:"downloaded"})});autoUpdater.on("error",err=>{if(mainWindow)mainWindow.webContents.send("auto-update-status",{status:"error",error:err.message})})}});
+  app.on("window-all-closed",()=>app.quit());
+  app.on("activate",()=>{if(BrowserWindow.getAllWindows().length===0)createWindow()});
+}

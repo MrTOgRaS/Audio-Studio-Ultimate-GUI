@@ -45,4 +45,9 @@ contextBridge.exposeInMainWorld("electronAPI", {
   openFolder:d=>ipcRenderer.invoke("open-folder",d),
   mkdir:d=>ipcRenderer.invoke("mkdir",d),
   openTerminal:d=>ipcRenderer.invoke("open-terminal",d),
+  checkUpdate:u=>ipcRenderer.invoke("check-update",u),
+  checkAutoUpdate:()=>ipcRenderer.invoke("auto-update-check"),
+  downloadUpdate:()=>ipcRenderer.invoke("auto-update-download"),
+  installUpdate:()=>ipcRenderer.invoke("auto-update-install"),
+  onUpdateStatus:(cb)=>{const h=(e,d)=>cb(d);ipcRenderer.on("auto-update-status",h);return()=>ipcRenderer.removeListener("auto-update-status",h)},
 });
