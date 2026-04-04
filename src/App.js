@@ -25,7 +25,7 @@ en:{
   encode_input:"Input",encode_output:"Output",encode_format:"Format",encode_bitrate:"Bitrate",encode_channel:"Channel",encode_engine:"Engine",
   encode_start:"Start Encode",encode_auto:"Automatic",
   encode_warn_title:"Warning — Audio Loss",encode_warn_text:"Selected bitrate is lower than original bitrate. Audio quality loss will occur. Do you want to continue?",
-  encode_continue:"Continue",
+  encode_continue:"Continue",encode_dtshd_6ch:"6 Channel (5.1)",encode_dtshd_8ch:"8 Channel (7.1)",
   // Demux
   demux_title:"Audio Demux (Core)",demux_sub:"Core audio extraction and channel splitting",
   demux_truehd:"TrueHD Core",demux_truehd_desc:"TrueHD → AC3 Core",
@@ -34,7 +34,7 @@ en:{
   demux_wav:"WAV (Stereo)",demux_wav_desc:"Single WAV file",
   demux_wavs:"WAVS (Channel)",demux_wavs_desc:"Each channel separate WAV",
   demux_mono:"Mono Channel Split",demux_mono_desc:"Mono WAV",
-  demux_start:"Start Demux",
+  demux_start:"Start Demux",demux_wavs_ch:"Channel Layout",
   // FPS
   fps_title:"Audio FPS Conversion",fps_sub:"Change audio file FPS values losslessly",
   fps_select:"Select FPS Conversion",fps_format:"Audio Format",fps_bitrate:"Bitrate",fps_convert:"Convert FPS",
@@ -57,7 +57,9 @@ en:{
   other_fix_clean:"Track Not Clean Fix",other_fix_clean_desc:'⚠ "This track is not clean"',
   other_fix_crc:"CRC Mismatch Fix",other_fix_crc_desc:'⚠ "frame CRC mismatch"',
   other_fix_noise:"Clean Noise",other_fix_noise_desc:"Cleans static noise",
+  other_fix_reencode:"Re-Encode Audio",other_fix_reencode_desc:"Remux via mkvmerge (.mka)",
   other_fix_btn:"Fix",
+  about_github:"GitHub",
   other_atmos_title:"E-AC-3 JOC Atmos 7.1 Fix",
   other_atmos_desc:"Performs channel map (channel mapping) correction in E-AC-3 JOC (Dolby Atmos) 7.1 bitstreams. CRC is rewritten, dialnorm is untouched, no re-encoding. Use only on .eac3 files.",
   other_atmos_chanmap:"Channel Map Fix",other_atmos_chanmap_desc:"Dependent frame chanmap + CRC correction",
@@ -81,13 +83,31 @@ en:{
   // Settings
   settings_title:"Settings",settings_sub:"Edit tool paths",settings_suite:"AudioSuite Folder",
   // About
-  about_title:"About",about_developer:"Developer",about_web:"Web",about_email:"Email",
+  about_title:"About",about_developer:"Developer",about_web:"Website",about_email:"Email",
   about_license:"MIT License",about_libraries:"Libraries",
   // Console
   console_cmd_opened:"CMD window opened.",console_done:"Done!",console_error:"Error.",
   // Disc demux
   disc_dvd_demux:"DVD Demux",disc_separate:"Separate files extracted",disc_merged:"Merged",
   disc_extracting:"extracting...",disc_merging:"Merging...",
+  // Channel Join
+  nav_join:"Audio Packing",
+  join_title:"Channel Join & Encode",join_sub:"Join mono WAV files into multichannel audio and encode",
+  join_mode:"Mode",join_stereo:"Stereo (2ch)",join_51:"5.1 Surround (6ch)",join_71:"7.1 Surround (8ch)",
+  join_format:"Output Format",join_bitrate:"Bitrate",join_start:"Start Encode",
+  join_assign:"Assign Channels",join_add_files:"Add WAV Files",
+  join_L:"Left (L)",join_R:"Right (R)",join_C:"Center (C)",join_LFE:"LFE",
+  join_SL:"Surround Left (Ls)",join_SR:"Surround Right (Rs)",join_BL:"Back Left (Lb)",join_BR:"Back Right (Rb)",
+  // XSE
+  join_xse_title:"DTS-HD MA Session Export",join_xse_desc:"Generate .xse session file for DTS-HD Master Audio Suite",
+  join_xse_generate:"Generate XSE",join_xse_51:"5.1 Session",join_xse_71:"7.1 Session",
+  join_xse_duration:"Duration",join_xse_framerate:"Frame Rate",join_xse_bitrate:"Bitrate (bps)",
+  join_xse_output:"Output Folder",join_xse_success:"XSE session file generated!",
+  // Update
+  update_check:"Check for Updates",update_checking:"Checking...",
+  update_available:"New version available!",update_latest:"You have the latest version.",
+  update_error:"Could not check for updates.",update_current:"Current",update_new:"Latest",
+  update_download:"Download",update_downloading:"Downloading...",update_install:"Install & Restart",update_downloaded:"Download complete!",
 },
 tr:{
   nav_home:"Anasayfa",nav_encode:"Ses Kodlama",nav_demux:"Ses Çıkarma",nav_fps:"FPS Dönüştür",nav_other:"Ek Araçlar",nav_movie:"Videoyu Ayıkla",nav_settings:"Ayarlar",nav_about:"Hakkında",
@@ -105,7 +125,7 @@ tr:{
   encode_input:"Giriş",encode_output:"Çıkış",encode_format:"Format",encode_bitrate:"Bitrate",encode_channel:"Kanal",encode_engine:"Motor",
   encode_start:"Encode Başlat",encode_auto:"Otomatik",
   encode_warn_title:"Uyarı — Ses Kaybı",encode_warn_text:"Seçilen bitrate orijinal bitraten daha düşük. Bu işlemde ses kalitesi kaybı yaşanacaktır. Devam etmek istiyor musunuz?",
-  encode_continue:"Devam Et",
+  encode_continue:"Devam Et",encode_dtshd_6ch:"6 Kanal (5.1)",encode_dtshd_8ch:"8 Kanal (7.1)",
   demux_title:"Ses Çıkarma (Core)",demux_sub:"Core ses çıkarma ve kanal ayırma",
   demux_truehd:"TrueHD Core",demux_truehd_desc:"TrueHD → AC3 Core",
   demux_dtshd:"DTS-HD MA Core",demux_dtshd_desc:"DTS-HD → DTS Core",
@@ -113,7 +133,7 @@ tr:{
   demux_wav:"WAV (Stereo)",demux_wav_desc:"Tek WAV dosyası",
   demux_wavs:"WAVS (Kanallar)",demux_wavs_desc:"Her kanal ayrı WAV",
   demux_mono:"Mono Kanal Ayırma",demux_mono_desc:"Mono WAV",
-  demux_start:"Demux Başlat",
+  demux_start:"Demux Başlat",demux_wavs_ch:"Kanal Düzeni",
   fps_title:"Ses FPS Dönüşümü",fps_sub:"Ses dosyalarının FPS değerini kayıpsız değiştirin",
   fps_select:"FPS Dönüşümü Seçin",fps_format:"Ses Formatı",fps_bitrate:"Bitrate",fps_convert:"FPS Dönüştür",
   fps_lossless_warn:"kayıpsız: WAV → FPS değişimi → DEE paketleme",
@@ -134,7 +154,9 @@ tr:{
   other_fix_clean:"Track Not Clean Fix",other_fix_clean_desc:'⚠ "This track is not clean"',
   other_fix_crc:"CRC Mismatch Fix",other_fix_crc_desc:'⚠ "frame CRC mismatch"',
   other_fix_noise:"Cızırtı Temizle",other_fix_noise_desc:"Parazitleri temizler",
+  other_fix_reencode:"Re-Encode Audio",other_fix_reencode_desc:"mkvmerge ile yeniden paketleme (.mka)",
   other_fix_btn:"Tamir Et",
+  about_github:"GitHub",
   other_atmos_title:"E-AC-3 JOC Atmos 7.1 Fix",
   other_atmos_desc:'E-AC-3 JOC (Dolby Atmos) 7.1 bitstream\'lerde chanmap (kanal eşleme) düzeltmesi yapar. CRC yeniden yazılır, dialnorm\'a dokunulmaz, yeniden encode yapılmaz. Sadece .eac3 dosyalarında kullanın.',
   other_atmos_chanmap:"Channel Map Fix",other_atmos_chanmap_desc:"Dependent frame chanmap + CRC düzeltme",
@@ -155,11 +177,29 @@ tr:{
   movie_hdr_title:"HDR Veri Çıkarma",movie_hdr_dovi:"Dolby Vision RPU",movie_hdr_hdr10:"HDR10+ Metadata",movie_hdr_extract:"Çıkar",
   movie_chapter_extract:"Chapter çıkar",
   settings_title:"Ayarlar",settings_sub:"Araç yollarını düzenleyin",settings_suite:"AudioSuite Klasörü",
-  about_title:"Hakkında",about_developer:"Geliştirici",about_web:"Web",about_email:"E-posta",
+  about_title:"Hakkında",about_developer:"Geliştirici",about_web:"Web Sitesi",about_email:"E-posta",
   about_license:"MIT Lisansı",about_libraries:"Kütüphaneler",
   console_cmd_opened:"CMD penceresi açıldı.",console_done:"Tamamlandı!",console_error:"Hata.",
   disc_dvd_demux:"DVD Demux",disc_separate:"Ayrı dosyalar çıkarıldı",disc_merged:"Birleştirildi",
   disc_extracting:"çıkarılıyor...",disc_merging:"Birleştiriliyor...",
+  // Channel Join
+  nav_join:"Ses Paketleme",
+  join_title:"Kanal Birleştir & Kodla",join_sub:"Mono WAV dosyalarını çok kanallı sese birleştir ve kodla",
+  join_mode:"Mod",join_stereo:"Stereo (2 Kanal)",join_51:"5.1 Surround (6 Kanal)",join_71:"7.1 Surround (8 Kanal)",
+  join_format:"Çıkış Formatı",join_bitrate:"Bitrate",join_start:"Kodlamayı Başlat",
+  join_assign:"Kanalları Ata",join_add_files:"WAV Dosyaları Ekle",
+  join_L:"Sol (L)",join_R:"Sağ (R)",join_C:"Merkez (C)",join_LFE:"LFE",
+  join_SL:"Surround Sol (Ls)",join_SR:"Surround Sağ (Rs)",join_BL:"Arka Sol (Lb)",join_BR:"Arka Sağ (Rb)",
+  // XSE
+  join_xse_title:"DTS-HD MA Oturum Dışa Aktarma",join_xse_desc:"DTS-HD Master Audio Suite için .xse oturum dosyası oluştur",
+  join_xse_generate:"XSE Oluştur",join_xse_51:"5.1 Oturum",join_xse_71:"7.1 Oturum",
+  join_xse_duration:"Süre",join_xse_framerate:"Frame Rate",join_xse_bitrate:"Bitrate (bps)",
+  join_xse_output:"Çıkış Klasörü",join_xse_success:"XSE oturum dosyası oluşturuldu!",
+  // Update
+  update_check:"Güncelleme Kontrol Et",update_checking:"Kontrol ediliyor...",
+  update_available:"Yeni sürüm mevcut!",update_latest:"En güncel sürümü kullanıyorsunuz.",
+  update_error:"Güncelleme kontrol edilemedi.",update_current:"Mevcut",update_new:"Güncel",
+  update_download:"İndir",update_downloading:"İndiriliyor...",update_install:"Kur ve Yeniden Başlat",update_downloaded:"İndirme tamamlandı!",
 }};
 
 
@@ -174,8 +214,20 @@ const LOSSLESS_FMTS=["TrueHD","DTS-HD","WAV"];
 const VOL_PRESETS_BASE=[{key:"light",value:"5dB",filter:'dynaudnorm=f=200:g=12:n=1:p=0.6:m=12:s=10'},{key:"medium",value:"10dB",filter:'dynaudnorm=f=250:g=15:n=1:p=0.75:m=15:s=12,acompressor=threshold=-18dB:ratio=2.5:attack=10:release=80:makeup=6'},{key:"strong",value:"15dB",filter:'dynaudnorm=f=300:g=18:n=1:p=0.9:m=20:s=15,acompressor=threshold=-22dB:ratio=3.5:attack=5:release=120:makeup=8'},{key:"default",value:"10dB",filter:'volume=10dB'}];
 const DEMUX_TOOLS_LIST=["MKVToolnix","Eac3to","DGDemux"];
 const ENGINES_BASE=[{id:"auto",key:"encode_auto"},{id:"deew",label:"DEEW"},{id:"deezy",label:"DeeZy"},{id:"eac3to",label:"eac3to"},{id:"ffmpeg",label:"FFmpeg"}];
-const NAV_KEYS=[{id:"home",icon:"⌂",key:"nav_home"},{id:"encode",icon:"♫",key:"nav_encode"},{id:"demux",icon:"⊕",key:"nav_demux"},{id:"fps",icon:"⟳",key:"nav_fps"},{id:"other",icon:"◈",key:"nav_other"},{id:"movie",icon:"▶",key:"nav_movie"},{id:"settings",icon:"⚙",key:"nav_settings"},{id:"about",icon:"ℹ",key:"nav_about"}];
-const DEFAULT_TOOLS={TOOL_PATH:"eac3to.exe",QAAC_PATH:"qaac64.exe",FFMPEG_PATH:"ffmpeg.exe",FFPROBE_PATH:"ffprobe.exe",DEEW_PATH:"deew.exe",DEEZY_PATH:"deezy.exe",DGDEMUX_PATH:"DGDemux.exe",MKVEXTRACT_PATH:"mkvextract.exe",MKVMERGE_PATH:"mkvmerge.exe",Truehdd_PATH:"truehdd.exe",THDMerge_PATH:"thdmerge.exe",Dovi_Tool_PATH:"dovi_tool.exe",MediaInfo_PATH:"MediaInfo.exe",HDR10Plus_PATH:"hdr10plus_tool.exe",AtmosFix_PATH:"eac3_7.1_atmos_fix.exe",Tsmuxer_PATH:"tsmuxer.exe",DEE_PATH:"dee.exe",AudioSuite:"C:\\Audio Tools Suite\\Atmos\\binaries"};
+const JOIN_FORMATS=["AC3","E-AC3","DTS","AAC","MP3","FLAC","PCM"];
+const JOIN_BITRATES={
+  AC3:{2:["128","160","192","224","256","320"],6:["384","448","640"],8:["384","448","640"]},
+  "E-AC3":{2:["128","192","224","256"],6:["256","384","448","640","768","1024"],8:["640","768","1024","1536"]},
+  DTS:{2:["447","768","1509"],6:["768","1509"],8:["768","1509"]},
+  AAC:{2:["96","128","192","256","320"],6:["320","448","640","1024"],8:["320","448","640","1024"]},
+  MP3:{2:["128","192","256","320"],6:["128","192","256","320"],8:["128","192","256","320"]},
+};
+const JOIN_CH_LABELS_2=["join_L","join_R"];
+const JOIN_CH_LABELS_6=["join_L","join_R","join_C","join_LFE","join_SL","join_SR"];
+const JOIN_CH_LABELS_8=["join_L","join_R","join_C","join_LFE","join_SL","join_SR","join_BL","join_BR"];
+const XSE_FRAMERATES=["23.976","24.000","25.000","29.970"];
+const NAV_KEYS=[{id:"home",icon:"⌂",key:"nav_home"},{id:"encode",icon:"♫",key:"nav_encode"},{id:"demux",icon:"⊕",key:"nav_demux"},{id:"join",icon:"⊞",key:"nav_join"},{id:"fps",icon:"⟳",key:"nav_fps"},{id:"other",icon:"◈",key:"nav_other"},{id:"movie",icon:"▶",key:"nav_movie"},{id:"settings",icon:"⚙",key:"nav_settings"},{id:"about",icon:"ℹ",key:"nav_about"}];
+const DEFAULT_TOOLS={TOOL_PATH:"eac3to.exe",QAAC_PATH:"qaac64.exe",FFMPEG_PATH:"ffmpeg.exe",FFPROBE_PATH:"ffprobe.exe",DEEW_PATH:"deew.exe",DEEZY_PATH:"deezy.exe",DGDEMUX_PATH:"DGDemux.exe",MKVEXTRACT_PATH:"mkvextract.exe",MKVMERGE_PATH:"mkvmerge.exe",Truehdd_PATH:"truehdd.exe",THDMerge_PATH:"thdmerge.exe",Dovi_Tool_PATH:"dovi_tool.exe",MediaInfo_PATH:"MediaInfo.exe",HDR10Plus_PATH:"hdr10plus_tool.exe",AtmosFix_PATH:"eac3_7.1_atmos_fix.exe",Tsmuxer_PATH:"tsmuxer.exe",DEE_PATH:"dee.exe",DTSEncoder_PATH:"DTSEncoder.jar",AudioSuite:"C:\\Audio Tools Suite\\Atmos\\binaries"};
 let api=typeof window!=="undefined"&&window.electronAPI?window.electronAPI:null;
 const ensureApi=()=>{if(!api&&typeof window!=="undefined")api=window.electronAPI||null;return api};
 let runnerCounter=0;
@@ -207,7 +259,7 @@ function useRunner(name,t){
   const id=useRef(name+"_"+(++runnerCounter));
   const[output,setOutput]=useState("");const[running,setRunning]=useState(false);const[pct,setPct]=useState(-1);const[done,setDone]=useState(false);
   const buf=useRef("");const cancelled=useRef(false);
-  const clear=()=>{buf.current="";setOutput("");setPct(-1);setDone(false);setRunning(false);cancelled.current=false};
+  const clear=()=>{if(ensureApi()&&api.cancelProcess)api.cancelProcess(id.current).catch(()=>{});buf.current="";setOutput("");setPct(-1);setDone(false);setRunning(false);cancelled.current=false};
   const reset=clear;
   const append=(s)=>{if(cancelled.current)return;buf.current+=s;setOutput(buf.current)};
 
@@ -254,11 +306,11 @@ function useRunner(name,t){
 }
 
 /* ═══ PAGES ═══ */
-function HomePage({setPage,t}){const stats=[{id:"encode",icon:"♫",label:"Audio Encode",desc:t("home_encode_desc"),color:"#6366f1"},{id:"demux",icon:"⊕",label:"Audio Demux",desc:t("home_demux_desc"),color:"#f59e0b"},{id:"fps",icon:"⟳",label:"FPS Conversion",desc:t("home_fps_desc"),color:"#10b981"},{id:"other",icon:"◈",label:"Other Options",desc:t("home_other_desc"),color:"#ef4444"},{id:"movie",icon:"▶",label:"Movie Demux",desc:t("home_movie_desc"),color:"#8b5cf6"},{id:"settings",icon:"⚙",label:t("nav_settings"),desc:t("home_settings_desc"),color:"#06b6d4"}];return(<div><div style={{textAlign:"center",padding:"30px 0 36px"}}><img src={APP_ICON} alt="Logo" style={{width:56,height:56,borderRadius:14,margin:"0 auto 12px",display:"block"}} /><div style={{fontSize:11,letterSpacing:3,color:"#6366f1",fontWeight:700,textTransform:"uppercase",marginBottom:8}}>{t("home_subtitle")}</div><h1 style={{margin:0,fontSize:32,fontWeight:800,background:"linear-gradient(135deg,#e2e4ed,#818cf8)",WebkitBackgroundClip:"text",WebkitTextFillColor:"transparent"}}>{t("home_title")}</h1><p style={{color:"#6b70a0",fontSize:13,marginTop:8}}>v1.0.0</p></div><div style={{display:"grid",gridTemplateColumns:"repeat(auto-fill,minmax(200px,1fr))",gap:14}}>{stats.map((s,i)=>(<Card key={i} style={{textAlign:"center",padding:20,cursor:"pointer",border:`1px solid ${s.color}18`}} onClick={()=>setPage(s.id)}><div style={{fontSize:28,marginBottom:8}}>{s.icon}</div><div style={{fontSize:14,fontWeight:700,color:"#e2e4ed",marginBottom:4}}>{s.label}</div><div style={{fontSize:11,color:"#6b70a0"}}>{s.desc}</div></Card>))}</div></div>)}
+function HomePage({setPage,t}){const stats=[{id:"encode",icon:"♫",label:t("nav_encode"),desc:t("home_encode_desc"),color:"#6366f1"},{id:"join",icon:"⊞",label:t("nav_join"),desc:t("join_sub"),color:"#06b6d4"},{id:"demux",icon:"⊕",label:t("nav_demux"),desc:t("home_demux_desc"),color:"#f59e0b"},{id:"fps",icon:"⟳",label:t("nav_fps"),desc:t("home_fps_desc"),color:"#10b981"},{id:"other",icon:"◈",label:t("nav_other"),desc:t("home_other_desc"),color:"#ef4444"},{id:"movie",icon:"▶",label:t("nav_movie"),desc:t("home_movie_desc"),color:"#8b5cf6"},{id:"settings",icon:"⚙",label:t("nav_settings"),desc:t("home_settings_desc"),color:"#06b6d4"}];return(<div><div style={{textAlign:"center",padding:"30px 0 36px"}}><img src={APP_ICON} alt="Logo" style={{width:56,height:56,borderRadius:14,margin:"0 auto 12px",display:"block"}} /><div style={{fontSize:11,letterSpacing:3,color:"#6366f1",fontWeight:700,textTransform:"uppercase",marginBottom:8}}>{t("home_subtitle")}</div><h1 style={{margin:0,fontSize:32,fontWeight:800,background:"linear-gradient(135deg,#e2e4ed,#818cf8)",WebkitBackgroundClip:"text",WebkitTextFillColor:"transparent"}}>{t("home_title")}</h1><p style={{color:"#6b70a0",fontSize:13,marginTop:8}}>v1.1</p></div><div style={{display:"grid",gridTemplateColumns:"repeat(auto-fill,minmax(200px,1fr))",gap:14}}>{stats.map((s,i)=>(<Card key={i} style={{textAlign:"center",padding:20,cursor:"pointer",border:`1px solid ${s.color}18`}} onClick={()=>setPage(s.id)}><div style={{fontSize:28,marginBottom:8}}>{s.icon}</div><div style={{fontSize:14,fontWeight:700,color:"#e2e4ed",marginBottom:4}}>{s.label}</div><div style={{fontSize:11,color:"#6b70a0"}}>{s.desc}</div></Card>))}</div></div>)}
 
 /* ── AUDIO ENCODE ── */
 function AudioEncodePage({t}){
-  const[inFmt,setInFmt]=useState("TrueHD");const[outFmt,setOutFmt]=useState("E-AC3");const[bitrate,setBitrate]=useState("Default");const[channel,setChannel]=useState("Default");const[file,setFile]=useState(null);const[warnPopup,setWarnPopup]=useState(false);const[engine,setEngine]=useState("auto");
+  const[inFmt,setInFmt]=useState("TrueHD");const[outFmt,setOutFmt]=useState("E-AC3");const[bitrate,setBitrate]=useState("Default");const[channel,setChannel]=useState("Default");const[file,setFile]=useState(null);const[warnPopup,setWarnPopup]=useState(false);const[engine,setEngine]=useState("auto");const[dtshdCh,setDtshdCh]=useState(6);
   const runner=useRunner("encode",t);
   const pickEngine=()=>{if(engine!=="auto")return engine;if(outFmt==="TrueHD")return"deezy";if(["E-AC3","AC3","AC-4"].includes(outFmt))return"deew";return"eac3to"};
   const runEncode=async(force)=>{
@@ -267,33 +319,134 @@ function AudioEncodePage({t}){
     const eng=pickEngine();const br=bitrate==="Default"?null:bitrate;const ch=channel==="Default"?null:channel==="5.1"?6:channel==="7.1"?8:channel==="2.0"?2:null;
     let cmd="";
     if(eng==="deew"){const tp=await api.resolveTool("DEEW_PATH");const fmt=outFmt==="AC3"?"dd":outFmt==="AC-4"?"ac4":outFmt==="TrueHD"?"thd":"ddp";cmd=`"${tp}" -f ${fmt}`;if(br)cmd+=` -b ${br}`;if(ch)cmd+=` -dm ${ch}`;cmd+=` -np -i "${file}"`;await runner.console(cmd,dir)}
+    else if(eng==="deezy"&&outFmt==="TrueHD"){const ff=await api.resolveTool("FFMPEG_PATH");const dw=await api.resolveTool("DEEW_PATH");const tmp=`${dir}\\${name}_temp.wav`;cmd=`"${ff}" -y -i "${file}" "${tmp}" && "${dw}" -f thd -i "${tmp}"`;await runner.console(cmd,dir)}
     else if(eng==="deezy"){const tp=await api.resolveTool("DEEZY_PATH");const fmt=outFmt==="AC3"?"dd":"ddp";cmd=`"${tp}" encode ${fmt}`;if(ch)cmd+=` --channels ${ch}`;if(br)cmd+=` --bitrate ${br}`;cmd+=` "${file}"`;await runner.console(cmd,dir)}
     else if(eng==="ffmpeg"||outFmt==="MP3"||outFmt==="MP2"||outFmt==="Opus"){
       const tp=await api.resolveTool("FFMPEG_PATH");
-      const ext=outFmt==="AC3"?".ac3":outFmt==="E-AC3"?".ec3":outFmt==="DTS"?".dts":outFmt==="DTS-HD"?".dtshd":outFmt==="FLAC"?".flac":outFmt==="WAV"?".wav":outFmt==="AAC"?".aac":outFmt==="MP3"?".mp3":outFmt==="MP2"?".mp2":outFmt==="Opus"?".opus":".ac3";
-      const codec=outFmt==="AC3"?"ac3":outFmt==="E-AC3"?"eac3":outFmt==="DTS"?"dca":outFmt==="FLAC"?"flac":outFmt==="WAV"?"pcm_s24le":outFmt==="AAC"?"aac":outFmt==="MP3"?"libmp3lame":outFmt==="MP2"?"mp2":outFmt==="Opus"?"libopus":"ac3";
+      const ext=outFmt==="AC3"?".ac3":outFmt==="E-AC3"?".ec3":outFmt==="DTS"?".dts":outFmt==="DTS-HD"?".dtshd":outFmt==="TrueHD"?".thd":outFmt==="FLAC"?".flac":outFmt==="WAV"?".wav":outFmt==="AAC"?".aac":outFmt==="MP3"?".mp3":outFmt==="MP2"?".mp2":outFmt==="Opus"?".opus":".ac3";
+      const codec=outFmt==="AC3"?"ac3":outFmt==="E-AC3"?"eac3":outFmt==="DTS"?"dca":outFmt==="TrueHD"?"truehd":outFmt==="FLAC"?"flac":outFmt==="WAV"?"pcm_s24le":outFmt==="AAC"?"aac":outFmt==="MP3"?"libmp3lame":outFmt==="MP2"?"mp2":outFmt==="Opus"?"libopus":"ac3";
       let bitrateArg="";
-      if(br){bitrateArg=` -b:a ${br}k`}else{const probe=await api.runFfprobe(file);if(probe.success){const a=(probe.data.streams||[]).find(s=>s.codec_type==="audio");if(a&&a.bit_rate)bitrateArg=` -b:a ${a.bit_rate}`}}
-      cmd=`"${tp}" -y -i "${file}" -c:a ${codec}${bitrateArg}`;if(ch)cmd+=` -ac ${ch}`;cmd+=` "${dir}\\${name}_encoded${ext}"`;await runner.stream(cmd)}
+      if(br){bitrateArg=` -b:a ${br}k`}else if(codec!=="truehd"&&codec!=="flac"&&codec!=="pcm_s24le"){const probe=await api.runFfprobe(file);if(probe.success){const a=(probe.data.streams||[]).find(s=>s.codec_type==="audio");if(a&&a.bit_rate)bitrateArg=` -b:a ${a.bit_rate}`}}
+      cmd=`"${tp}" -y -i "${file}" -strict -2 -c:a ${codec}${bitrateArg}`;if(ch)cmd+=` -ac ${ch}`;cmd+=` "${dir}\\${name}_encoded${ext}"`;await runner.stream(cmd)}
     else{
       const tp=await api.resolveTool("TOOL_PATH");
       const ext=outFmt==="E-AC3"?".ec3":outFmt==="DTS"?".dts":outFmt==="DTS-HD"?".dtshd":outFmt==="FLAC"?".flac":outFmt==="WAV"?".wav":outFmt==="AAC"?".aac":outFmt==="Stereo Downmix"?".ac3":".ac3";
       const of2=`"${dir}\\${name}_encoded${ext}"`;
       cmd=(channel==="2.0"||outFmt==="Stereo Downmix")?`"${tp}" "${file}" ${of2} ${br?"-"+br:""} -downmix -no2ndpass`:`"${tp}" "${file}" ${of2} ${br?"-"+br:""}`;
       cmd=cmd.replace(/\s+/g," ").trim();await runner.stream(cmd)}};
+  const runDtshdEncode=async()=>{
+    if(!ensureApi()||!file)return;
+    runner.clear();runner.setRunning(true);runner.setPct(0);
+    const dir=file.replace(/\\[^\\]+$/,"");const name=file.replace(/^.*[\\/]/,"").replace(/\.[^.]+$/,"");
+    const tempDir=dir+"\\DTS_Temp";await api.mkdir(tempDir);
+    // Step 1: MediaInfo — Duration & FPS
+    runner.append("=== STEP 1: MediaInfo ===\n");
+    const mi=await api.resolveTool("MediaInfo_PATH");
+    const durRes=await api.runCommand(`"${mi}" --Inform="Audio;%Duration/String3%" "${file}"`);
+    const fpsRes=await api.runCommand(`"${mi}" --Inform="Video;%FrameRate%" "${file}"`);
+    const rawDur=(durRes.stdout||"").trim();const rawFps=(fpsRes.stdout||"").trim()||"23.976";
+    let duration=rawDur;const durM=rawDur.match(/(\d{2}):(\d{2}):(\d{2})\.(\d+)/);
+    if(durM){const ms=parseInt(durM[4].padEnd(3,"0").slice(0,3));const fr=Math.round(ms*parseFloat(rawFps)/1000);duration=`${durM[1]}:${durM[2]}:${durM[3]}:${String(fr).padStart(2,"0")}`}
+    runner.append(`Duration: ${duration}\nFPS: ${rawFps}\n\n`);runner.setPct(10);
+    // Step 2: eac3to channel split to WAVs
+    runner.append("=== STEP 2: eac3to → WAVS ===\n");
+    const eac=await api.resolveTool("TOOL_PATH");
+    const wavCmd=`"${eac}" "${file}" "${tempDir}\\kanal.wavs"`;
+    runner.append("$ "+wavCmd+"\n");
+    const wavId="wavs_"+Date.now();
+    const unsub2=api.onStreamData(wavId,chunk=>{runner.append(chunk);const m=chunk.match(/(\d+)%/);if(m)runner.setPct(10+Math.round(parseInt(m[1])*0.25))});
+    const wavRes=await api.runCommandStream(wavCmd,null,wavId);unsub2();
+    if(!wavRes.success){runner.append("\n❌ eac3to WAVS failed\n");runner.setPct(-1);runner.setRunning(false);runner.setDone(true);return}
+    runner.setPct(35);
+    // Step 3: Generate XSE session file
+    runner.append("\n=== STEP 3: XSE Template ===\n");
+    const ch=dtshdCh;const layout=ch===8?"7.1 - L, R, C, LFE, Lss, Rss, Lsr, Rsr":"5.1 - L, R, C, LFE, Lss, Rss";
+    const wavNames6=["L","R","C","LFE","SL","SR"];const wavNames8=["L","R","C","LFE","SL","SR","BL","BR"];
+    const xseNames6=["L","R","C","LFE","Lss","Rss"];const xseNames8=["L","R","C","LFE","Lss","Rss","Lsr","Rsr"];
+    const wavN=ch===8?wavNames8:wavNames6;const xseN=ch===8?xseNames8:xseNames6;
+    let xml='<?xml version="1.0" encoding="UTF-8"?>\n<DTSHD_Master_Audio_Suite_Session Version="2.6">\n  <Config>\n    <DestinationFormat>Blu-ray Disc (.dtshd)</DestinationFormat>\n    <ChannelLayout>'+layout+'</ChannelLayout>\n    <SampleRate>48000</SampleRate>\n    <TCFrameRate>'+rawFps+'</TCFrameRate>\n    <Duration>'+duration+'</Duration>\n    <Bitrate>1509000</Bitrate>\n  </Config>\n  <InputFiles>\n';
+    for(let i=0;i<ch;i++)xml+=`    <File Channel="${xseN[i]}">${tempDir}\\kanal.${wavN[i]}.wav</File>\n`;
+    xml+='  </InputFiles>\n  <Output>\n    <File>'+tempDir+'\\cikti.dtshd</File>\n  </Output>\n</DTSHD_Master_Audio_Suite_Session>';
+    const xsePath=tempDir+"\\gecici_gorev.xse";
+    await api.writeFile(xsePath,xml);
+    runner.append("XSE → "+xsePath+"\n\n");runner.setPct(45);
+    // Step 4: DTSEncoder.jar
+    runner.append("=== STEP 4: DTS Encoder ===\n");
+    const jar=await api.resolveTool("DTSEncoder_PATH");const jarDir=jar.replace(/\\[^\\]+$/,"");
+    const encCmd=`cd /d "${jarDir}" && java -Djava.library.path="." -jar "DTSEncoder.jar" -encode "${xsePath}"`;
+    runner.append("$ "+encCmd+"\n");
+    const encId="dtshd_"+Date.now();
+    const unsub4=api.onStreamData(encId,chunk=>{runner.append(chunk);const m=chunk.match(/(\d+)%/);if(m)runner.setPct(45+Math.round(parseInt(m[1])*0.4))});
+    const encRes=await api.runCommandStream(encCmd,jarDir,encId);unsub4();
+    if(!encRes.success){runner.append("\n❌ DTS Encoder failed\n");runner.setPct(-1);runner.setRunning(false);runner.setDone(true);return}
+    runner.setPct(85);
+    // Step 5: Move output
+    runner.append("\n=== STEP 5: Move Output ===\n");
+    const finalName=`${dir}\\${name}_DTSHD.dtshd`;
+    const mvCmd=`move /y "${tempDir}\\cikti.dtshd" "${finalName}"`;
+    runner.append("$ "+mvCmd+"\n");
+    const mvRes=await api.runCommand(mvCmd);
+    runner.append(mvRes.success?`\n✅ Output: ${finalName}\n`:"\n❌ Move failed\n");
+    runner.setPct(mvRes.success?100:-1);runner.setRunning(false);runner.setDone(true)};
   const bitrateOpts=[{value:"Default",label:t("default_original")},...BITRATES_ALL_RAW.map(b=>({value:String(b),label:`${b} kbps`}))];
   const channelOpts=[{value:"Default",label:t("default_original")},...CHANNELS_LIST_RAW.map(c=>({value:c,label:c}))];
-  const engineOpts=ENGINES_BASE.map(e=>({value:e.id,label:e.key?t(e.key):e.label}));
+  const engineOpts=ENGINES_BASE.filter(e=>outFmt==="TrueHD"?e.id!=="eac3to":true).map(e=>({value:e.id,label:e.key?t(e.key):e.label}));
   return(<div><SectionTitle sub={t("encode_sub")}>{t("encode_title")}</SectionTitle><FileDropZone file={file} setFile={setFile} t={t}/>
-    <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:14,marginTop:16}}><Card><div style={{fontSize:12,fontWeight:700,color:"#6366f1",marginBottom:12,textTransform:"uppercase",letterSpacing:1}}>{t("encode_input")}</div><Select label={t("encode_format")} value={inFmt} onChange={setInFmt} options={FORMATS}/></Card><Card><div style={{fontSize:12,fontWeight:700,color:"#10b981",marginBottom:12,textTransform:"uppercase",letterSpacing:1}}>{t("encode_output")}</div><Select label={t("encode_format")} value={outFmt} onChange={setOutFmt} options={OUT_FORMATS}/></Card></div>
-    <div style={{display:"grid",gridTemplateColumns:"1fr 1fr 1fr",gap:14,marginTop:14}}><Select label={t("encode_bitrate")} value={bitrate} onChange={setBitrate} options={bitrateOpts}/><Select label={t("encode_channel")} value={channel} onChange={setChannel} options={channelOpts}/><Select label={t("encode_engine")} value={engine} onChange={setEngine} options={engineOpts}/></div>
-    <ActionButtons t={runner} file={file} setFile={setFile} running={runner.running} onRun={()=>runEncode(false)} runLabel={t("encode_start")} i18n={t}/>
+    <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:14,marginTop:16}}><Card><div style={{fontSize:12,fontWeight:700,color:"#6366f1",marginBottom:12,textTransform:"uppercase",letterSpacing:1}}>{t("encode_input")}</div><Select label={t("encode_format")} value={inFmt} onChange={setInFmt} options={FORMATS}/></Card><Card><div style={{fontSize:12,fontWeight:700,color:"#10b981",marginBottom:12,textTransform:"uppercase",letterSpacing:1}}>{t("encode_output")}</div><Select label={t("encode_format")} value={outFmt} onChange={v=>{setOutFmt(v);if(v==="TrueHD"&&engine==="eac3to")setEngine("auto")}} options={OUT_FORMATS}/></Card></div>
+    {outFmt==="DTS-HD"?<Card style={{marginTop:14}}><div style={{fontSize:12,fontWeight:700,color:"#10b981",marginBottom:12,textTransform:"uppercase",letterSpacing:1}}>DTS-HD MA — Channel</div><div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:8}}>{[[6,"encode_dtshd_6ch"],[8,"encode_dtshd_8ch"]].map(([n,k])=>(<div key={n} onClick={()=>setDtshdCh(n)} style={{padding:14,borderRadius:10,cursor:"pointer",textAlign:"center",background:dtshdCh===n?"#6366f118":"#0d0f1a",border:`1px solid ${dtshdCh===n?"#6366f1":"#1e2240"}`}}><div style={{fontSize:14,fontWeight:700,color:dtshdCh===n?"#818cf8":"#8a8fa6"}}>{t(k)}</div></div>))}</div></Card>:<div style={{display:"grid",gridTemplateColumns:"1fr 1fr 1fr",gap:14,marginTop:14}}><Select label={t("encode_bitrate")} value={bitrate} onChange={setBitrate} options={bitrateOpts}/><Select label={t("encode_channel")} value={channel} onChange={setChannel} options={channelOpts}/><Select label={t("encode_engine")} value={engine} onChange={setEngine} options={engineOpts}/></div>}
+    <ActionButtons t={runner} file={file} setFile={setFile} running={runner.running} onRun={outFmt==="DTS-HD"?runDtshdEncode:()=>runEncode(false)} runLabel={t("encode_start")} i18n={t}/>
     <Terminal output={runner.output} running={runner.running} percent={runner.pct} done={runner.done} onClear={runner.clear} t={t}/>
     <Popup open={warnPopup} onClose={()=>setWarnPopup(false)} title={"⚠ "+t("encode_warn_title")}><p style={{color:"#f59e0b",fontSize:13,lineHeight:1.7}}>{t("encode_warn_text")}</p><div style={{display:"flex",gap:10,marginTop:16}}><Btn primary onClick={()=>{setWarnPopup(false);runEncode(true)}}>{t("encode_continue")}</Btn><Btn onClick={()=>setWarnPopup(false)}>{t("cancel")}</Btn></div></Popup>
   </div>)}
 
+/* ── CHANNEL JOIN & ENCODE ── */
+function ChannelJoinPage({t}){
+  const[mode,setMode]=useState(6);const[fmt,setFmt]=useState("AC3");const[bitrate,setBitrate]=useState("");
+  const[files,setFiles]=useState(Array(8).fill(null));
+  const runner=useRunner("join",t);
+  const chLabels=mode===2?JOIN_CH_LABELS_2:mode===6?JOIN_CH_LABELS_6:JOIN_CH_LABELS_8;
+  const modeLabel=mode===2?"Stereo":mode===6?"5.1 Surround":"7.1 Surround";
+  const isLossless=fmt==="FLAC"||fmt==="PCM";
+  const brList=isLossless?[]:(JOIN_BITRATES[fmt]&&JOIN_BITRATES[fmt][mode])||[];
+  useEffect(()=>{if(brList.length>0&&!brList.includes(bitrate))setBitrate(brList[0]);if(isLossless)setBitrate("")},[fmt,mode]);// eslint-disable-line
+  const setChFile=async(idx)=>{if(!ensureApi())return;const p=await api.selectMediaFile();if(p){const nf=[...files];nf[idx]=p;setFiles(nf)}};
+  const clearFiles=()=>setFiles(Array(8).fill(null));
+  const addMultiple=async()=>{if(!ensureApi())return;const ps=await api.selectMultipleFiles();if(ps&&ps.length>0){const nf=[...files];for(let i=0;i<Math.min(ps.length,mode);i++)nf[i]=ps[i];setFiles(nf)}};
+  const activeFiles=files.slice(0,mode);
+  const allFilled=activeFiles.every(Boolean);
+
+  const runJoin=async()=>{
+    if(!ensureApi()||!allFilled)return;
+    const ff=await api.resolveTool("FFMPEG_PATH");const dir=files[0].replace(/\\[^\\]+$/,"");
+    const layout=mode===2?"stereo":mode===6?"5.1":"7.1";
+    const chMap=mode===2?"0.0-FL|1.0-FR":mode===6?"0.0-FL|1.0-FR|2.0-FC|3.0-LFE|4.0-BL|5.0-BR":"0.0-FL|1.0-FR|2.0-FC|3.0-LFE|4.0-BL|5.0-BR|6.0-SL|7.0-SR";
+    const inputs=activeFiles.map(f=>`-i "${f}"`).join(" ");
+    const codec=fmt==="AC3"?"ac3":fmt==="E-AC3"?"eac3":fmt==="DTS"?"dca":fmt==="AAC"?"aac":fmt==="MP3"?"libmp3lame":fmt==="FLAC"?"flac":"pcm_s24le";
+    const ext=fmt==="AC3"?"ac3":fmt==="E-AC3"?"eac3":fmt==="DTS"?"dts":fmt==="AAC"?"m4a":fmt==="MP3"?"mp3":fmt==="FLAC"?"flac":"wav";
+    const brTag=isLossless?(fmt==="FLAC"?"Lossless":"Uncompressed"):(bitrate+"k");
+    const outName=`Encode_${brTag}_${fmt}.${ext}`;
+    let filterExtra="";let syncVal="0.00533";let brParam=isLossless?"":`-b:a ${bitrate}k`;
+    if(fmt==="MP3"){filterExtra=",aresample=async=1,pan=stereo|c0=c0|c1=c1";syncVal="0"}
+    if(fmt==="DTS"&&mode>=6){const cl=mode===6?"5.1":"7.1";filterExtra=`,channelmap=channel_layout=${cl}`;syncVal="0.012"}
+    if(fmt==="FLAC"||fmt==="PCM")syncVal="0";
+    const cmd=`"${ff}" ${inputs} -filter_complex "join=inputs=${mode}:channel_layout=${layout}:map=${chMap}${filterExtra},aresample=async=1" -c:a ${codec} ${brParam} -strict -2 -ar 48000 -ss ${syncVal} -fflags +genpts -avoid_negative_ts make_zero "${dir}\\${outName}"`;
+    await runner.stream(cmd)};
+
+  return(<div><SectionTitle sub={t("join_sub")}>{t("join_title")}</SectionTitle>
+    <Card style={{marginBottom:16}}><div style={{fontSize:12,fontWeight:700,color:"#10b981",marginBottom:14,textTransform:"uppercase",letterSpacing:1}}>{t("join_mode")}</div>
+      <div style={{display:"grid",gridTemplateColumns:"1fr 1fr 1fr",gap:8}}>{[[2,"join_stereo"],[6,"join_51"],[8,"join_71"]].map(([n,k])=>(<div key={n} onClick={()=>{setMode(n);clearFiles()}} style={{padding:"14px",borderRadius:10,cursor:"pointer",textAlign:"center",background:mode===n?"#6366f118":"#0d0f1a",border:`1px solid ${mode===n?"#6366f1":"#1e2240"}`}}><div style={{fontSize:14,fontWeight:700,color:mode===n?"#818cf8":"#8a8fa6"}}>{t(k)}</div></div>))}</div></Card>
+    <Card style={{marginBottom:16}}><div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:14}}><span style={{fontSize:12,fontWeight:700,color:"#f59e0b",textTransform:"uppercase",letterSpacing:1}}>{t("join_assign")} — {modeLabel}</span><Btn small onClick={addMultiple}>{t("join_add_files")}</Btn></div>
+      <div style={{display:"grid",gap:6}}>{chLabels.map((lk,i)=>(<div key={i} style={{display:"flex",alignItems:"center",gap:10,padding:"8px 14px",borderRadius:8,background:files[i]?"#10b98110":"#0d0f1a",border:`1px solid ${files[i]?"#10b98133":"#1e2240"}`}}><span style={{fontSize:12,color:"#818cf8",fontWeight:700,width:140}}>{t(lk)}</span><span style={{flex:1,fontSize:11,color:"#6b70a0",overflow:"hidden",textOverflow:"ellipsis",whiteSpace:"nowrap"}}>{files[i]?files[i].replace(/^.*[\\/]/,""):"—"}</span><Btn small onClick={()=>setChFile(i)}>📂</Btn></div>))}</div></Card>
+    <Card><div style={{display:"grid",gridTemplateColumns:isLossless?"1fr":"1fr 1fr",gap:14}}>
+      <Select label={t("join_format")} value={fmt} onChange={v=>{setFmt(v);setBitrate("")}} options={JOIN_FORMATS}/>
+      {!isLossless&&<Select label={t("join_bitrate")} value={bitrate} onChange={setBitrate} options={brList.map(b=>({value:b,label:`${b} kbps`}))}/>}</div>
+      {fmt==="MP3"&&mode>2&&<div style={{marginTop:10,fontSize:11,color:"#f59e0b"}}>⚠ MP3: Stereo Downmix</div>}
+      <ActionButtons t={runner} file={allFilled?"ok":null} setFile={()=>clearFiles()} running={runner.running} onRun={runJoin} runLabel={t("join_start")} i18n={t}/></Card>
+    <Terminal output={runner.output} running={runner.running} percent={runner.pct} done={runner.done} onClear={runner.clear} t={t}/>
+  </div>)}
+
 /* ── AUDIO DEMUX ── */
-function AudioDemuxPage({t}){const[file,setFile]=useState(null);const[mode,setMode]=useState("truehd");const runner=useRunner("demux",t);
+function AudioDemuxPage({t}){const[file,setFile]=useState(null);const[mode,setMode]=useState("truehd");const[wavsCh,setWavsCh]=useState(6);const runner=useRunner("demux",t);
   const modes=[
     {id:"truehd",label:t("demux_truehd"),desc:t("demux_truehd_desc"),suffix:"~Core.ac3",args:"-core"},
     {id:"dtshd",label:t("demux_dtshd"),desc:t("demux_dtshd_desc"),suffix:"~Core.dts",args:"-core"},
@@ -305,22 +458,25 @@ function AudioDemuxPage({t}){const[file,setFile]=useState(null);const[mode,setMo
   const cur=modes.find(m=>m.id===mode);
   const run=async()=>{
     if(!ensureApi()||!file)return;
-    const tp=await api.resolveTool("TOOL_PATH");
     const n=file.replace(/\.[^.]+$/,"");
-    const dir=file.replace(/\\[^\\]+$/,"");
     if(mode==="wavs"){
-      const outDir=dir+"\\wavs_output";
-      await api.mkdir(outDir);
       const ff=await api.resolveTool("FFMPEG_PATH");
-      const cmd=`"${ff}" -y -i "${file}" -filter_complex "channelsplit=channel_layout=5.1[FL][FR][FC][LFE][BL][BR]" -map "[FL]" "${outDir}\\L.wav" -map "[FR]" "${outDir}\\R.wav" -map "[FC]" "${outDir}\\C.wav" -map "[LFE]" "${outDir}\\LFE.wav" -map "[BL]" "${outDir}\\Ls.wav" -map "[BR]" "${outDir}\\Rs.wav"`;
-      const r=await runner.stream(cmd);
-      if(r&&r.success)api.openFolder(outDir);
+      if(wavsCh===8){
+        const cmd=`"${ff}" -y -i "${file}" -filter_complex "channelsplit=channel_layout=7.1[FL][FR][FC][LFE][SL][SR][BL][BR]" -map "[FL]" "${n}_L.wav" -map "[FR]" "${n}_R.wav" -map "[FC]" "${n}_C.wav" -map "[LFE]" "${n}_LFE.wav" -map "[SL]" "${n}_SL.wav" -map "[SR]" "${n}_SR.wav" -map "[BL]" "${n}_BL.wav" -map "[BR]" "${n}_BR.wav"`;
+        await runner.stream(cmd);
+      }else{
+        const cmd=`"${ff}" -y -i "${file}" -filter_complex "channelsplit=channel_layout=5.1[FL][FR][FC][LFE][BL][BR]" -map "[FL]" "${n}_L.wav" -map "[FR]" "${n}_R.wav" -map "[FC]" "${n}_C.wav" -map "[LFE]" "${n}_LFE.wav" -map "[BL]" "${n}_SL.wav" -map "[BR]" "${n}_SR.wav"`;
+        await runner.stream(cmd);
+      }
       return;
     }
+    const tp=await api.resolveTool("TOOL_PATH");
     const cmd=`"${tp}" "${file}" "${n}${cur.suffix}" ${cur.args}`.trim();
     await runner.stream(cmd);
   };
-  return(<div><SectionTitle sub={t("demux_sub")}>{t("demux_title")}</SectionTitle><FileDropZone file={file} setFile={setFile} t={t}/><div style={{display:"grid",gap:8,marginTop:16}}>{modes.map(m=>(<div key={m.id} onClick={()=>setMode(m.id)} style={{display:"flex",alignItems:"center",gap:14,padding:"14px 18px",borderRadius:10,cursor:"pointer",background:mode===m.id?"#6366f112":"#13152140",border:`1px solid ${mode===m.id?"#6366f144":"#1e2240"}`}}><div style={{width:18,height:18,borderRadius:9,border:`2px solid ${mode===m.id?"#6366f1":"#3d4166"}`,display:"flex",alignItems:"center",justifyContent:"center"}}>{mode===m.id&&<div style={{width:10,height:10,borderRadius:5,background:"#6366f1"}}/>}</div><div><div style={{fontSize:14,fontWeight:600,color:"#e2e4ed"}}>{m.label}</div><div style={{fontSize:11,color:"#6b70a0"}}>{m.desc}</div></div></div>))}</div><ActionButtons t={runner} file={file} setFile={setFile} running={runner.running} onRun={run} runLabel={t("demux_start")} i18n={t}/><Terminal output={runner.output} running={runner.running} percent={runner.pct} done={runner.done} onClear={runner.clear} t={t}/></div>)}
+  return(<div><SectionTitle sub={t("demux_sub")}>{t("demux_title")}</SectionTitle><FileDropZone file={file} setFile={setFile} t={t}/><div style={{display:"grid",gap:8,marginTop:16}}>{modes.map(m=>(<div key={m.id} onClick={()=>setMode(m.id)} style={{display:"flex",alignItems:"center",gap:14,padding:"14px 18px",borderRadius:10,cursor:"pointer",background:mode===m.id?"#6366f112":"#13152140",border:`1px solid ${mode===m.id?"#6366f144":"#1e2240"}`}}><div style={{width:18,height:18,borderRadius:9,border:`2px solid ${mode===m.id?"#6366f1":"#3d4166"}`,display:"flex",alignItems:"center",justifyContent:"center"}}>{mode===m.id&&<div style={{width:10,height:10,borderRadius:5,background:"#6366f1"}}/>}</div><div><div style={{fontSize:14,fontWeight:600,color:"#e2e4ed"}}>{m.label}</div><div style={{fontSize:11,color:"#6b70a0"}}>{m.desc}</div></div></div>))}</div>
+    {mode==="wavs"&&<Card style={{marginTop:12}}><div style={{fontSize:12,fontWeight:700,color:"#10b981",marginBottom:10,textTransform:"uppercase",letterSpacing:1}}>{t("demux_wavs_ch")}</div><div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:8}}>{[[6,"encode_dtshd_6ch"],[8,"encode_dtshd_8ch"]].map(([n,k])=>(<div key={n} onClick={()=>setWavsCh(n)} style={{padding:"14px",borderRadius:10,cursor:"pointer",textAlign:"center",background:wavsCh===n?"#6366f118":"#0d0f1a",border:`1px solid ${wavsCh===n?"#6366f1":"#1e2240"}`}}><div style={{fontSize:14,fontWeight:700,color:wavsCh===n?"#818cf8":"#8a8fa6"}}>{t(k)}</div></div>))}</div></Card>}
+    <ActionButtons t={runner} file={file} setFile={setFile} running={runner.running} onRun={run} runLabel={t("demux_start")} i18n={t}/><Terminal output={runner.output} running={runner.running} percent={runner.pct} done={runner.done} onClear={runner.clear} t={t}/></div>)}
 
 
 /* ── FPS CONVERSION ── */
@@ -425,19 +581,20 @@ function OtherOptionsPage({t}){const[tab,setTab]=useState("volume");const[file,s
   const tabs=[{id:"volume",label:t("other_volume"),icon:"🔊"},{id:"fix",label:t("other_fix"),icon:"🔧"},{id:"atmos",label:t("other_atmos"),icon:"🌐"},{id:"spectrum",label:t("other_spectrum"),icon:"📊"},{id:"info",label:t("other_info"),icon:"ℹ"},{id:"movieinfo",label:t("other_movieinfo"),icon:"🎬"},{id:"metadata",label:t("other_metadata"),icon:"📋"}];
   const runVolume=async()=>{if(!ensureApi()||!file)return;const ff=await api.resolveTool("FFMPEG_PATH");const n=file.replace(/\.[^.]+$/,"");await tv.stream(`"${ff}" -y -i "${file}" -af "${VOL_PRESETS_BASE[volPreset].filter}" "${n}_boosted.ac3"`)};
   const runFix=async(m)=>{if(!ensureApi()||!file)return;const ext2=(file.match(/\.([^.\\]+)$/)||[])[1]||"ac3";const n=file.replace(/\.[^.]+$/,"");
-    if(m===1){const tp=await api.resolveTool("TOOL_PATH");await tf.stream(`"${tp}" "${file}" "${n}_fixed.${ext2}" -progressnumbers`)}
-    else if(m===2){const ff=await api.resolveTool("FFMPEG_PATH");const probe=await api.runFfprobe(file);let codec="copy",brArg="";if(probe.success){const a=(probe.data.streams||[]).find(s=>s.codec_type==="audio");if(a){codec=a.codec_name==="ac3"?"ac3":a.codec_name==="eac3"?"eac3":a.codec_name==="dts"?"dca":a.codec_name==="mp2"?"mp2":a.codec_name==="aac"?"aac":a.codec_name||"copy";if(a.bit_rate)brArg=` -b:a ${a.bit_rate}`}}await tf.stream(`"${ff}" -y -err_detect ignore_err -fflags +discardcorrupt -i "${file}" -c:a ${codec}${brArg} "${n}_crc_fixed.${ext2}"`)}
-    else{const ff=await api.resolveTool("FFMPEG_PATH");const probe=await api.runFfprobe(file);let codec="aac",brArg="";if(probe.success){const a=(probe.data.streams||[]).find(s=>s.codec_type==="audio");if(a){codec=a.codec_name==="ac3"?"ac3":a.codec_name==="eac3"?"eac3":a.codec_name==="dts"?"dca":a.codec_name==="mp2"?"mp2":a.codec_name==="aac"?"aac":a.codec_name||"aac";if(a.bit_rate)brArg=` -b:a ${a.bit_rate}`}}await tf.stream(`"${ff}" -y -i "${file}" -af "anlmdn=s=7:p=0.002:r=0.015:m=15:o=o" -c:a ${codec}${brArg} "${n}_denoised.${ext2}"`)}};
+    if(m===1){const tp=await api.resolveTool("TOOL_PATH");await tf.stream(`"${tp}" "${file}" "${n}_fixed.${ext2}" -fix -silence -progressnumbers`)}
+    else if(m===2){const ff=await api.resolveTool("FFMPEG_PATH");await tf.stream(`"${ff}" -y -err_detect ignore_err -i "${file}" -c copy "${n}_crc_fixed.${ext2}"`)}
+    else if(m===3){const ff=await api.resolveTool("FFMPEG_PATH");const probe=await api.runFfprobe(file);let codec="aac",brArg="";if(probe.success){const a=(probe.data.streams||[]).find(s=>s.codec_type==="audio");if(a){codec=a.codec_name==="ac3"?"ac3":a.codec_name==="eac3"?"eac3":a.codec_name==="dts"?"dca":a.codec_name==="mp2"?"mp2":a.codec_name==="aac"?"aac":a.codec_name||"aac";if(a.bit_rate)brArg=` -b:a ${a.bit_rate}`}}await tf.stream(`"${ff}" -y -i "${file}" -af "anlmdn=s=7:p=0.002:r=0.015:m=15:o=o" -c:a ${codec}${brArg} "${n}_denoised.${ext2}"`)}
+    else if(m===4){const mk=await api.resolveTool("MKVMERGE_PATH");await tf.stream(`"${mk}" -o "${n}_reencode.mka" "${file}"`)}};
   const runSpectrum=async()=>{if(!ensureApi()||!file)return;const ff=await api.resolveTool("FFMPEG_PATH");const n=file.replace(/\.[^.]+$/,"");await ts.stream(`"${ff}" -y -i "${file}" -lavfi showspectrumpic=s=1024x512 "${n}_spectrum.png"`)};
   const runInfo=async()=>{if(!ensureApi()||!file)return;ti.clear();ti.setRunning(true);ti.append(t("other_querying")+"...\n\n");const[res,dn]=await Promise.all([api.runFfprobe(file),api.getDialnorm(file)]);let txt="";if(res.success){const d=res.data;if(d.format)txt+=`Format: ${d.format.format_long_name}\nDuration: ${parseFloat(d.format.duration||0).toFixed(2)}s\nBitrate: ${Math.round((d.format.bit_rate||0)/1000)} kbps\n\n`;(d.streams||[]).forEach((s,i)=>{txt+=`--- Stream #${i} (${s.codec_type}) ---\nCodec: ${s.codec_long_name||s.codec_name}\n`;if(s.codec_type==="audio")txt+=`Channels: ${s.channels}\nSample Rate: ${s.sample_rate} Hz\nBitrate: ${Math.round((s.bit_rate||0)/1000)} kbps\n`;txt+="\n"})}txt+=`\n══ Dialnorm: ${dn.dialnorm} dB ══\n`;if(dn.fps)txt+=`FPS: ${dn.fps}\n`;txt+="\n"+dn.raw;ti.setOutput(txt);ti.setRunning(false);ti.setDone(true)};
   const runMovieInfo=async()=>{if(!ensureApi()||!file)return;tm.clear();tm.setRunning(true);tm.append("MediaInfo...\n");const r=await api.runMediainfo(file);tm.setOutput(r.success?r.output:"❌ "+r.error);tm.setRunning(false);tm.setDone(true)};
   const runMetadata=async()=>{if(!ensureApi()||!file)return;const tr2=await api.resolveTool("Truehdd_PATH");const op=metaPath||file.replace(/\\[^\\]+$/,"");await tt.stream(`"${tr2}" decode --presentation ${presentation} --output-path "${op}" "${file}"`)};
-  const runAtmosFix=async()=>{if(!ensureApi()||!file)return;const af=await api.resolveTool("AtmosFix_PATH");const n=file.replace(/\.[^.]+$/,"");await ta.stream(`"${af}" -i "${file}" -o "${n}_fixed.eac3"`)};
+  const runAtmosFix=async()=>{if(!ensureApi()||!file)return;const af=await api.resolveTool("AtmosFix_PATH");const n=file.replace(/\.[^.]+$/,"");await ta.stream(`"${af}" -input "${file}" -output "${n}_fixed.eac3"`)};
   return(<div><SectionTitle sub={t("other_sub")}>{t("other_title")}</SectionTitle>
     <div style={{display:"flex",gap:6,marginBottom:18,flexWrap:"wrap"}}>{tabs.map(tb=>(<button key={tb.id} onClick={()=>setTab(tb.id)} style={{padding:"8px 16px",borderRadius:8,border:`1px solid ${tab===tb.id?"#6366f1":"#2d3148"}`,background:tab===tb.id?"#6366f118":"transparent",color:tab===tb.id?"#818cf8":"#6b70a0",cursor:"pointer",fontSize:12,fontWeight:600,display:"flex",alignItems:"center",gap:6}}>{tb.icon} {tb.label}</button>))}</div>
     <FileDropZone file={file} setFile={setFile} t={t}/>
     {tab==="volume"&&<Card style={{marginTop:16}}><div style={{fontSize:13,fontWeight:700,color:"#e2e4ed",marginBottom:14}}>{t("other_vol_title")}</div><div style={{display:"grid",gridTemplateColumns:"repeat(auto-fill,minmax(150px,1fr))",gap:8}}>{VOL_PRESETS_BASE.map((p,i)=>(<div key={i} onClick={()=>setVolPreset(i)} style={{padding:"14px",borderRadius:10,cursor:"pointer",textAlign:"center",background:volPreset===i?"#6366f115":"#0d0f1a",border:`1px solid ${volPreset===i?"#6366f1":"#1e2240"}`}}><div style={{fontSize:14,fontWeight:700,color:volPreset===i?"#818cf8":"#e2e4ed"}}>{volLabels[i]}</div><div style={{marginTop:6}}><Badge color="#10b981">{p.value}</Badge></div></div>))}</div><ActionButtons t={tv} file={file} setFile={setFile} running={tv.running} onRun={runVolume} runLabel={t("start")} i18n={t}/></Card>}
-    {tab==="fix"&&<Card style={{marginTop:16}}><div style={{fontSize:13,fontWeight:700,color:"#e2e4ed",marginBottom:14}}>🔧 {t("other_fix_title")}</div><div style={{display:"grid",gap:8}}>{[{id:1,label:t("other_fix_clean"),desc:t("other_fix_clean_desc"),color:"#f59e0b"},{id:2,label:t("other_fix_crc"),desc:t("other_fix_crc_desc"),color:"#ef4444"},{id:3,label:t("other_fix_noise"),desc:t("other_fix_noise_desc"),color:"#10b981"}].map(f=>(<div key={f.id} style={{display:"flex",justifyContent:"space-between",alignItems:"center",padding:"14px 18px",borderRadius:10,background:"#0d0f1a",border:"1px solid #1e2240"}}><div><div style={{fontSize:14,fontWeight:600,color:"#e2e4ed"}}>{f.label}</div><div style={{fontSize:11,color:f.color,marginTop:2}}>{f.desc}</div></div><Btn small primary disabled={!file||tf.running} onClick={()=>runFix(f.id)}>{t("other_fix_btn")}</Btn></div>))}</div></Card>}
+    {tab==="fix"&&<Card style={{marginTop:16}}><div style={{fontSize:13,fontWeight:700,color:"#e2e4ed",marginBottom:14}}>🔧 {t("other_fix_title")}</div><div style={{display:"grid",gap:8}}>{[{id:1,label:t("other_fix_clean"),desc:t("other_fix_clean_desc"),color:"#f59e0b"},{id:2,label:t("other_fix_crc"),desc:t("other_fix_crc_desc"),color:"#ef4444"},{id:3,label:t("other_fix_noise"),desc:t("other_fix_noise_desc"),color:"#10b981"},{id:4,label:t("other_fix_reencode"),desc:t("other_fix_reencode_desc"),color:"#818cf8"}].map(f=>(<div key={f.id} style={{display:"flex",justifyContent:"space-between",alignItems:"center",padding:"14px 18px",borderRadius:10,background:"#0d0f1a",border:"1px solid #1e2240"}}><div><div style={{fontSize:14,fontWeight:600,color:"#e2e4ed"}}>{f.label}</div><div style={{fontSize:11,color:f.color,marginTop:2}}>{f.desc}</div></div><Btn small primary disabled={!file||tf.running} onClick={()=>runFix(f.id)}>{t("other_fix_btn")}</Btn></div>))}</div></Card>}
     {tab==="atmos"&&<Card style={{marginTop:16}}><div style={{fontSize:13,fontWeight:700,color:"#e2e4ed",marginBottom:14}}>🌐 {t("other_atmos_title")}</div><p style={{fontSize:12,color:"#6b70a0",lineHeight:1.7,marginBottom:14}}>{t("other_atmos_desc")}</p><div style={{display:"grid",gap:10}}><div style={{padding:"14px 18px",borderRadius:10,background:"#0d0f1a",border:"1px solid #1e2240"}}><div style={{display:"flex",justifyContent:"space-between",alignItems:"center"}}><div><div style={{fontSize:14,fontWeight:600,color:"#e2e4ed"}}>{t("other_atmos_chanmap")}</div><div style={{fontSize:11,color:"#8b5cf6",marginTop:2}}>{t("other_atmos_chanmap_desc")}</div></div><Btn small primary disabled={!file||ta.running} onClick={runAtmosFix}>{t("other_atmos_apply")}</Btn></div></div></div><div style={{marginTop:14,padding:12,background:"#0d0f1a",borderRadius:8,fontSize:11,color:"#6b70a0",lineHeight:1.7}}><strong style={{color:"#f59e0b"}}>⚠</strong> {t("other_atmos_warn")}<br/><br/><strong style={{color:"#818cf8"}}>→</strong> {t("other_atmos_workflow")}</div></Card>}
     {tab==="spectrum"&&<Card style={{marginTop:16}}><Btn primary disabled={!file||ts.running} onClick={runSpectrum}>{ts.running?t("processing"):t("other_spectrum_btn")}</Btn></Card>}
     {tab==="info"&&<Card style={{marginTop:16}}><Btn primary disabled={!file||ti.running} onClick={runInfo}>{ti.running?t("other_querying"):t("other_info_btn")}</Btn></Card>}
@@ -542,7 +699,7 @@ function MovieDemuxPage({t}){
 function SettingsPage({t}){const[tools,setTools]=useState(DEFAULT_TOOLS);const[resolved,setResolved]=useState({});const[loaded,setLoaded]=useState(false);const[saved,setSaved]=useState(false);
   useEffect(()=>{if(ensureApi()){api.getSettings().then(s=>{if(s)setTools(s);setLoaded(true)});api.resolveAllTools().then(r=>setResolved(r))}else setLoaded(true)},[]);
   const updateTool=(k,v)=>{setTools(p=>({...p,[k]:v}));setSaved(false)};const handleSave=async()=>{if(ensureApi()){await api.saveSettings(tools);setResolved(await api.resolveAllTools())}setSaved(true);setTimeout(()=>setSaved(false),3000)};const handleBrowse=async k=>{if(!ensureApi())return;const p=k==="AudioSuite"?await api.selectFolder():await api.selectFile({folder:false});if(p)updateTool(k,p)};
-  const labels={TOOL_PATH:"eac3to",QAAC_PATH:"QAAC64",FFMPEG_PATH:"FFmpeg",FFPROBE_PATH:"FFprobe",DEEW_PATH:"DEEW",DEEZY_PATH:"DeeZy",DGDEMUX_PATH:"DGDemux",MKVEXTRACT_PATH:"MKVExtract",MKVMERGE_PATH:"MKVMerge",Truehdd_PATH:"Truehdd",THDMerge_PATH:"THD Merge",Dovi_Tool_PATH:"Dovi Tool",MediaInfo_PATH:"MediaInfo",HDR10Plus_PATH:"HDR10+ Tool",AtmosFix_PATH:"Atmos Fix",Tsmuxer_PATH:"Tsmuxer",DEE_PATH:"DEE Engine",AudioSuite:t("settings_suite")};
+  const labels={TOOL_PATH:"eac3to",QAAC_PATH:"QAAC64",FFMPEG_PATH:"FFmpeg",FFPROBE_PATH:"FFprobe",DEEW_PATH:"DEEW",DEEZY_PATH:"DeeZy",DGDEMUX_PATH:"DGDemux",MKVEXTRACT_PATH:"MKVExtract",MKVMERGE_PATH:"MKVMerge",Truehdd_PATH:"Truehdd",THDMerge_PATH:"THD Merge",Dovi_Tool_PATH:"Dovi Tool",MediaInfo_PATH:"MediaInfo",HDR10Plus_PATH:"HDR10+ Tool",AtmosFix_PATH:"Atmos Fix",Tsmuxer_PATH:"Tsmuxer",DEE_PATH:"DEE Engine",DTSEncoder_PATH:"DTS Encoder",AudioSuite:t("settings_suite")};
   if(!loaded)return<div style={{color:"#6b70a0",textAlign:"center",padding:40}}>{t("loading")}</div>;
   return(<div><SectionTitle sub={t("settings_sub")}>{t("settings_title")}</SectionTitle>
     <Card><div style={{display:"grid",gap:10}}>{Object.entries(tools).map(([k,v])=>(<div key={k}><div style={{display:"flex",alignItems:"center",gap:10}}><label style={{fontSize:12,color:"#8a8fa6",width:120,flexShrink:0,textAlign:"right"}}>{labels[k]||k}</label><input value={v} onChange={e=>updateTool(k,e.target.value)} style={{flex:1,background:"#1a1d2e",border:"1px solid #2d3148",borderRadius:8,padding:"9px 12px",color:"#e2e4ed",fontSize:12,outline:"none",fontFamily:"monospace"}}/><Btn small onClick={()=>handleBrowse(k)}>📂</Btn></div>{k!=="AudioSuite"&&resolved[k]&&<div style={{marginLeft:130,fontSize:10,color:resolved[k].includes(":\\")||resolved[k].includes("/")?"#10b981":"#f59e0b",marginTop:2}}>→ {resolved[k]}</div>}</div>))}</div></Card>
@@ -550,9 +707,29 @@ function SettingsPage({t}){const[tools,setTools]=useState(DEFAULT_TOOLS);const[r
   </div>)}
 
 /* ── ABOUT ── */
-function AboutPage({t}){return(<div><SectionTitle>{t("about_title")}</SectionTitle>
-  <Card style={{textAlign:"center",padding:30}}><img src={APP_ICON} alt="Logo" style={{width:64,height:64,borderRadius:16,margin:"0 auto 16px",display:"block"}} /><h2 style={{margin:"0 0 4px",fontSize:22,fontWeight:800,color:"#e2e4ed"}}>Audio Studio Ultimate</h2><p style={{color:"#6b70a0",fontSize:13}}>v1.0.0</p><div style={{marginTop:20,display:"grid",gap:8,textAlign:"left",maxWidth:350,margin:"20px auto 0"}}>
-    {[[t("about_developer"),"Murat Oğraş"],[t("about_web"),"www.mrtogras.com"],[t("about_email"),"destek@mrtogras.com"]].map(([k,v])=>(<div key={k} style={{display:"flex",justifyContent:"space-between",padding:"8px 0",borderBottom:"1px solid #1e2240"}}><span style={{color:"#8a8fa6",fontSize:12}}>{k}</span><span style={{color:"#818cf8",fontSize:12,fontWeight:600}}>{v}</span></div>))}</div></Card>
+function AboutPage({t}){
+  const[updateStatus,setUpdateStatus]=useState(null);const[checking,setChecking]=useState(false);const[latestVer,setLatestVer]=useState("");const[downloadPct,setDownloadPct]=useState(0);
+  const APP_VERSION="1.1";
+  const UPDATE_URL="https://api.github.com/repos/MrTOgRaS/Audio-Studio-Ultimate-GUI/releases/latest";
+  const compareVer=(a,b)=>{const pa=a.split(".").map(Number),pb=b.split(".").map(Number);for(let i=0;i<Math.max(pa.length,pb.length);i++){if((pa[i]||0)>(pb[i]||0))return 1;if((pa[i]||0)<(pb[i]||0))return-1}return 0};
+  useEffect(()=>{if(ensureApi()&&api.onUpdateStatus){const unsub=api.onUpdateStatus(d=>{if(d.status==="available"){setLatestVer(d.version||"");setUpdateStatus("available");setChecking(false)}else if(d.status==="latest"){setUpdateStatus("latest");setChecking(false)}else if(d.status==="downloading"){setUpdateStatus("downloading");setDownloadPct(d.percent||0)}else if(d.status==="downloaded"){setUpdateStatus("downloaded")}else if(d.status==="error"){setUpdateStatus("error");setChecking(false)}});return unsub}},[]);
+  const checkUpdate=async()=>{setChecking(true);setUpdateStatus(null);try{if(ensureApi()&&api.checkAutoUpdate){const r=await api.checkAutoUpdate();if(!r.error)return}if(ensureApi()&&api.checkUpdate){const res=await api.checkUpdate(UPDATE_URL);if(res.success){const latest=(res.data.tag_name||"").replace(/^v/,"");setLatestVer(latest);setUpdateStatus(latest&&compareVer(latest,APP_VERSION)>0?"available":"latest")}else{setUpdateStatus("error")}}else{const res=await fetch(UPDATE_URL);if(!res.ok)throw new Error("fetch fail");const data=await res.json();const latest=(data.tag_name||"").replace(/^v/,"");setLatestVer(latest);setUpdateStatus(latest&&compareVer(latest,APP_VERSION)>0?"available":"latest")}}catch(e){setUpdateStatus("error")}finally{setChecking(false)}};
+  const startDownload=async()=>{if(ensureApi()&&api.downloadUpdate){setUpdateStatus("downloading");setDownloadPct(0);await api.downloadUpdate()}};
+  const installNow=()=>{if(ensureApi()&&api.installUpdate)api.installUpdate()};
+  const openUrl=(url)=>{if(ensureApi()&&api.runCommand)api.runCommand(`start "" "${url}"`);else window.open(url,"_blank")};
+  return(<div><SectionTitle>{t("about_title")}</SectionTitle>
+  <Card style={{textAlign:"center",padding:30}}><img src={APP_ICON} alt="Logo" style={{width:64,height:64,borderRadius:16,margin:"0 auto 16px",display:"block"}} /><h2 style={{margin:"0 0 4px",fontSize:22,fontWeight:800,color:"#e2e4ed"}}>Audio Studio Ultimate</h2><p style={{color:"#6b70a0",fontSize:13}}>v{APP_VERSION}</p><div style={{marginTop:20,display:"grid",gap:8,textAlign:"left",maxWidth:350,margin:"20px auto 0"}}>
+    <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",padding:"8px 0",borderBottom:"1px solid #1e2240"}}><span style={{color:"#8a8fa6",fontSize:12}}>{t("about_developer")}</span><span style={{color:"#818cf8",fontSize:12,fontWeight:600}}>Murat Oğraş</span></div>
+    <div style={{display:"flex",gap:10,justifyContent:"center",padding:"12px 0"}}><button onClick={()=>openUrl("https://www.mrtogras.com")} style={{flex:1,background:"#6366f118",border:"1px solid #6366f144",borderRadius:8,padding:"8px 14px",cursor:"pointer",display:"flex",alignItems:"center",justifyContent:"center",gap:6,color:"#818cf8",fontSize:12,fontWeight:600}}>🌐 {t("about_web")}</button><button onClick={()=>openUrl("mailto:destek@mrtogras.com")} style={{flex:1,background:"#10b98118",border:"1px solid #10b98144",borderRadius:8,padding:"8px 14px",cursor:"pointer",display:"flex",alignItems:"center",justifyContent:"center",gap:6,color:"#10b981",fontSize:12,fontWeight:600}}>📧 {t("about_email")}</button><button onClick={()=>openUrl("https://github.com/MrTOgRaS/Audio-Studio-Ultimate-GUI")} style={{flex:1,background:"#8b5cf618",border:"1px solid #8b5cf644",borderRadius:8,padding:"8px 14px",cursor:"pointer",display:"flex",alignItems:"center",justifyContent:"center",gap:6,color:"#8b5cf6",fontSize:12,fontWeight:600}}>🐙 GitHub</button></div>
+    </div></Card>
+  <Card style={{marginTop:16}}><div style={{fontSize:12,fontWeight:700,color:"#10b981",marginBottom:12}}>🔄 {t("update_check")}</div>
+    <div style={{display:"flex",alignItems:"center",gap:12}}><Btn primary small disabled={checking} onClick={checkUpdate}>{checking?t("update_checking"):t("update_check")}</Btn>
+      {updateStatus==="available"&&<div style={{fontSize:12,display:"flex",alignItems:"center",gap:10,flexWrap:"wrap"}}><span style={{color:"#f59e0b",fontWeight:700}}>⚠ {t("update_available")}</span><span style={{color:"#6b70a0"}}>{t("update_current")}: v{APP_VERSION} → {t("update_new")}: v{latestVer}</span><Btn primary small onClick={startDownload}>⬇ {t("update_download")}</Btn><Btn small onClick={()=>openUrl("https://github.com/MrTOgRaS/Audio-Studio-Ultimate-GUI/releases/latest")}>🐙 GitHub</Btn></div>}
+      {updateStatus==="downloading"&&<div style={{fontSize:12,display:"flex",alignItems:"center",gap:10,flex:1}}><span style={{color:"#818cf8",fontWeight:600}}>{t("update_downloading")} {downloadPct}%</span><div style={{flex:1,height:6,background:"#1e2240",borderRadius:3,overflow:"hidden"}}><div style={{height:"100%",background:"linear-gradient(90deg,#6366f1,#818cf8)",borderRadius:3,transition:"width .3s",width:downloadPct+"%"}}/></div></div>}
+      {updateStatus==="downloaded"&&<div style={{fontSize:12,display:"flex",alignItems:"center",gap:10}}><span style={{color:"#10b981",fontWeight:700}}>✅ {t("update_downloaded")}</span><Btn primary small onClick={installNow}>🔄 {t("update_install")}</Btn></div>}
+      {updateStatus==="latest"&&<span style={{color:"#10b981",fontSize:12,fontWeight:600}}>✅ {t("update_latest")}</span>}
+      {updateStatus==="error"&&<span style={{color:"#ef4444",fontSize:12}}>{t("update_error")}</span>}
+    </div></Card>
   <Card style={{marginTop:16}}><div style={{fontSize:12,fontWeight:700,color:"#6366f1",marginBottom:12}}>{t("about_license")}</div><div style={{maxHeight:180,overflow:"auto",background:"#0a0c16",borderRadius:8,padding:14,fontSize:11,color:"#8a8fa6",lineHeight:1.7,fontFamily:"monospace"}}>MIT License{"\n\n"}Copyright (c) 2026 Murat Oğraş{"\n\n"}Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:{"\n\n"}The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.{"\n\n"}THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED.</div></Card>
   <Card style={{marginTop:16}}><div style={{fontSize:12,fontWeight:700,color:"#6366f1",marginBottom:12}}>{t("about_libraries")}</div><div style={{display:"grid",gridTemplateColumns:"repeat(auto-fill,minmax(160px,1fr))",gap:8}}>{["React 19","Electron 41","eac3to","FFmpeg","FFprobe","DEEW","DeeZy","DGDemux","MKVToolnix","truehdd","dovi_tool","hdr10plus_tool","DEE","MediaInfo","tsMuxeR","QAAC"].map(lib=>(<div key={lib} style={{padding:"10px 14px",borderRadius:8,background:"#0d0f1a",border:"1px solid #1e2240",fontSize:12,color:"#e2e4ed",fontWeight:600,textAlign:"center"}}>{lib}</div>))}</div></Card>
 </div>)}
@@ -563,7 +740,7 @@ export default function App(){const[page,setPage]=useState("home");const[collaps
   return(<div style={{display:"flex",height:"100vh",background:"#0c0e1a",color:"#e2e4ed",fontFamily:"'Segoe UI',system-ui,sans-serif",overflow:"hidden"}}>
     <style>{`@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}`}</style>
     <aside style={{width:collapsed?62:220,background:"linear-gradient(180deg,#10122000,#10122088)",borderRight:"1px solid #1a1d30",display:"flex",flexDirection:"column",transition:"width .3s",flexShrink:0,overflow:"hidden"}}>
-      <div style={{padding:collapsed?"16px 10px":"20px 18px",borderBottom:"1px solid #1a1d30",display:"flex",alignItems:"center",gap:10,cursor:"pointer",minHeight:64}} onClick={()=>setCollapsed(c=>!c)}><img src={APP_ICON} alt="Logo" style={{width:32,height:32,borderRadius:10,flexShrink:0}} />{!collapsed&&<div><div style={{fontSize:14,fontWeight:800,letterSpacing:-.3}}>Audio Studio</div><div style={{fontSize:10,color:"#6b70a0"}}>Ultimate GUI v1.0</div></div>}</div>
+      <div style={{padding:collapsed?"16px 10px":"20px 18px",borderBottom:"1px solid #1a1d30",display:"flex",alignItems:"center",gap:10,cursor:"pointer",minHeight:64}} onClick={()=>setCollapsed(c=>!c)}><img src={APP_ICON} alt="Logo" style={{width:32,height:32,borderRadius:10,flexShrink:0}} />{!collapsed&&<div><div style={{fontSize:14,fontWeight:800,letterSpacing:-.3}}>Audio Studio</div><div style={{fontSize:10,color:"#6b70a0"}}>Ultimate GUI v1.1</div></div>}</div>
       <nav style={{flex:1,padding:"12px 8px",display:"flex",flexDirection:"column",gap:2}}>{NAV_KEYS.map(n=>(<button key={n.id} onClick={()=>setPage(n.id)} style={{display:"flex",alignItems:"center",gap:12,padding:collapsed?"10px":"10px 14px",borderRadius:10,border:"none",cursor:"pointer",transition:"all .2s",textAlign:"left",background:page===n.id?"#6366f115":"transparent",color:page===n.id?"#818cf8":"#6b70a0",fontSize:13,fontWeight:page===n.id?700:500,justifyContent:collapsed?"center":"flex-start"}}><span style={{fontSize:16,flexShrink:0,width:20,textAlign:"center"}}>{n.icon}</span>{!collapsed&&<span style={{whiteSpace:"nowrap"}}>{t(n.key)}</span>}</button>))}</nav>
       {!collapsed&&<div>
         <div style={{display:"flex",justifyContent:"center",gap:6,padding:"10px 18px"}}>
@@ -576,6 +753,7 @@ export default function App(){const[page,setPage]=useState("home");const[collaps
     <main style={{flex:1,overflow:"auto",padding:"28px 32px"}}><div style={{maxWidth:820,margin:"0 auto"}}>
       <div style={{display:page==="home"?"block":"none"}}><HomePage setPage={setPage} t={t}/></div>
       <div style={{display:page==="encode"?"block":"none"}}><AudioEncodePage t={t}/></div>
+      <div style={{display:page==="join"?"block":"none"}}><ChannelJoinPage t={t}/></div>
       <div style={{display:page==="demux"?"block":"none"}}><AudioDemuxPage t={t}/></div>
       <div style={{display:page==="fps"?"block":"none"}}><FPSConversionPage t={t}/></div>
       <div style={{display:page==="other"?"block":"none"}}><OtherOptionsPage t={t}/></div>
