@@ -262,6 +262,8 @@ This program is a **GUI shell** and does not bundle any third-party executables 
 
 ### 🛠️ Powered By **MrTOgRaS**
 
+[![Support Me](https://img.shields.io/badge/Support_My_Work-❤️_Click_Here-ea4335?style=for-the-badge)](https://mrtogras.com/support/)
+
 [🌐 Website](https://www.mrtogras.com) &nbsp;•&nbsp; [📧 Email](mailto:destek@mrtogras.com) &nbsp;•&nbsp; [🐙 GitHub](https://github.com/MrTOgRaS)
 
 <br />
