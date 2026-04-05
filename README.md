@@ -15,7 +15,20 @@
 
 ![Audio Studio Ultimate Banner](banner.png)
 
+</div>
+
 ---
+
+This software is a 'GUI Wrapper' shell developed to simplify complex audio processing workflows. It does not contain any copyrighted engines, encoders, or binaries. Its primary goal is to provide a visual interface for managing external tools that the user already owns. Operating on a 'Bring Your Own Binary' (BYOB) principle, the user must manually define the paths for all required tools in the settings menu after installation.
+
+---
+
+> [!IMPORTANT]
+> By using this software, you agree to the terms listed in the [Legal Disclaimer](#disclaimer) section at the bottom of this page.
+
+---
+
+<div align="center">
 
 ### 🌐 Select Language / Dil Seçin
 
@@ -79,12 +92,12 @@ Built on **Electron 41** and **React 19**, it provides a responsive, native-feel
 
 | Tool | Download | License |
 |---|---|---|
-| **FFmpeg** *(includes FFprobe)* | [GitHub Releases](https://github.com/BtbN/FFmpeg-Builds/releases) | GPL / LGPL |
+| **FFmpeg** *(includes FFprobe)* | [GitHub Releases](https://github.com/BtbN/FFmpeg-Builds/releases) | MIT |
 | **eac3to** | [RationalQM](https://www.rationalqm.us/eac3to/) | Freeware |
 | **QAAC** | [GitHub Releases](https://github.com/nu774/qaac/releases) | Public Domain |
 | **MKVToolNix** *(mkvextract, mkvmerge)* | [Official Downloads](https://mkvtoolnix.download/downloads.html) | GPL v2 |
-| **DEEW** | [GitHub](https://github.com/pcroland/deew) | GPL v3 |
-| **DeeZy** | [GitHub](https://github.com/Draz1l/DeeZy) | GPL v3 |
+| **DEEW** | [GitHub](https://github.com/pcroland/deew) | MIT |
+| **DeeZy** | [GitHub](https://github.com/jessielw/DeeZy) | MIT |
 | **DGDemux** | [Official Site](https://www.rationalqm.us/dgdemux/dgdemux.html) | Freeware |
 | **MediaInfo** | [Official Downloads](https://mediaarea.net/en/MediaInfo/Download) | BSD |
 | **DTS Master Audio Suite** *(DTSEncoder.jar)* | DTS Professional | 💰 Commercial |
@@ -94,18 +107,6 @@ Built on **Electron 41** and **React 19**, it provides a responsive, native-feel
 | **truehdd** | [GitHub Releases](https://github.com/truehdd/truehdd) | Apache 2.0 |
 | **Apple CoreAudioToolbox** | Install [iTunes](https://www.apple.com/itunes/) or Apple Application Support | Apple EULA |
 | **Dolby Encoding Engine (Buy)** | [Dolby Professional Support](https://professionalsupport.dolby.com/s/topic/0TO4u000000ey3AGAQ/dolby-encoding-engine-dee?language=en_US) | 💰 Commercial |
-
-> **📌 Dolby Encoding Engine (DEE) Path:**
-> ```
-> C:\Audio Tools Suite 2026\dee\dee.exe
-> ```
-> If DEE does not work, make sure the path is correctly set in the app's **Settings** panel. DEE requires a valid **Dolby license** — without it, encoding will fail. As a free alternative, the app will automatically fall back to **DEEW** or **FFmpeg** for supported formats.
-
-> **📌 DTS Master Audio Suite Path:**
-> ```
-> C:\Program Files (x86)\DTS\MAS-SAS\DTSEncoder.jar
-> ```
-> DTSEncoder.jar requires Java to be installed. The encoder must be run from its installation directory (the app handles this automatically).
 
 ---
 
@@ -139,13 +140,6 @@ npm run dist         # Build Electron installer + portable
 | 📦 Portable | `release/Audio Studio Ultimate Portable 1.1.exe` |
 | 💿 Installer | `release/Audio Studio Ultimate Setup 1.1.exe` |
 | 📄 Update manifest | `release/latest.yml` |
-
-### 🚀 Publish to GitHub Releases
-
-```bash
-set GH_TOKEN=ghp_xxxxxxxxxxxx
-npm run dist -- --publish always
-```
 
 This builds the app and automatically uploads Setup, Portable and `latest.yml` to GitHub Releases. The in-app auto-updater uses `latest.yml` to detect new versions.
 
@@ -223,33 +217,21 @@ SOFTWARE.
 
 | Araç | İndirme | Lisans |
 |---|---|---|
-| **FFmpeg** *(FFprobe dahil)* | [GitHub Releases](https://github.com/BtbN/FFmpeg-Builds/releases) | GPL / LGPL |
-| **eac3to** | [RationalQM](https://www.rationalqm.us/eac3to/) | Ücretsiz |
+| **FFmpeg** *(FFprobe dahil)* | [GitHub Releases](https://github.com/BtbN/FFmpeg-Builds/releases) | MIT |
+| **eac3to** | [RationalQM](https://www.rationalqm.us/eac3to/) | Freeware |
 | **QAAC** | [GitHub Releases](https://github.com/nu774/qaac/releases) | Public Domain |
 | **MKVToolNix** *(mkvextract, mkvmerge)* | [Resmi İndirmeler](https://mkvtoolnix.download/downloads.html) | GPL v2 |
-| **DEEW** | [GitHub](https://github.com/pcroland/deew) | GPL v3 |
-| **DeeZy** | [GitHub](https://github.com/Draz1l/DeeZy) | GPL v3 |
-| **DGDemux** | [Resmi Site](https://www.rationalqm.us/dgdemux/dgdemux.html) | Ücretsiz |
-| **MediaInfo** | [Resmi İndirmeler](https://mediaarea.net/en/MediaInfo/Download) | BSD |
-| **DTS Master Audio Suite** *(DTSEncoder.jar)* | DTS Professional | 💰 Ticari |
+| **DEEW** | [GitHub](https://github.com/pcroland/deew) | MIT |
+| **DeeZy** | [GitHub](https://github.com/jessielw/DeeZy) | MIT |
+| **DGDemux** | [Official Site](https://www.rationalqm.us/dgdemux/dgdemux.html) | Freeware |
+| **MediaInfo** | [Official Downloads](https://mediaarea.net/en/MediaInfo/Download) | BSD |
+| **DTS Master Audio Suite** *(DTSEncoder.jar)* | DTS Professional | 💰 Commercial |
 | **dovi_tool** | [GitHub Releases](https://github.com/quietvoid/dovi_tool/releases) | MIT |
 | **hdr10plus_tool** | [GitHub Releases](https://github.com/quietvoid/hdr10plus_tool/releases) | MIT |
 | **tsMuxeR** | [GitHub Releases](https://github.com/justdan96/tsMuxer/releases) | Apache 2.0 |
 | **truehdd** | [GitHub Releases](https://github.com/truehdd/truehdd) | Apache 2.0 |
 | **Apple CoreAudioToolbox** | [iTunes](https://www.apple.com/itunes/) veya Apple Application Support yükleyin | Apple EULA |
 | **Dolby Encoding Engine (Satın Al)** | [Dolby Professional Support](https://professionalsupport.dolby.com/s/topic/0TO4u000000ey3AGAQ/dolby-encoding-engine-dee?language=en_US) | 💰 Ticari |
-
-> **📌 Dolby Encoding Engine (DEE) Yolu:**
-> ```
-> C:\Audio Tools Suite 2026\dee\dee.exe
-> ```
-> DEE çalışmıyorsa, uygulamanın **Ayarlar** panelinden yolun doğru ayarlandığından emin olun. DEE geçerli bir **Dolby lisansı** gerektirir — lisans olmadan kodlama başarısız olur. Ücretsiz alternatif olarak, uygulama desteklenen formatlar için otomatik olarak **DEEW** veya **FFmpeg**'e geçiş yapar.
-
-> **📌 DTS Master Audio Suite Yolu:**
-> ```
-> C:\Program Files (x86)\DTS\MAS-SAS\DTSEncoder.jar
-> ```
-> DTSEncoder.jar için Java'nın yüklü olması gerekir. Kodlayıcı kurulum dizininden çalıştırılmalıdır (uygulama bunu otomatik halleder).
 
 ---
 
@@ -262,11 +244,28 @@ MIT License — Copyright (c) 2026 Murat Oğraş
 Tam lisans metni için [LICENSE](LICENSE) dosyasına bakın.
 
 ---
+---
+
+## Disclaimer
+
+### ⚖️ Liability Waiver
+This software is provided **"as is,"** without warranty of any kind. **MrTOgRaS**, the developer, is not affiliated with any third-party tool providers mentioned in the documentation. The developer is not liable for any legal issues arising from the user's method of obtaining or using external executable files (binaries).
+
+### 🛠️ Technical Note
+This program is a **GUI shell** and does not bundle any third-party executables or licensed engines. It operates on a **BYOB (Bring Your Own Binary)** principle. Users are responsible for providing their own binaries and configuring the file paths within the settings menu.
+
+---
+
+---
 
 <div align="center">
 
-**Powered By MrTOgRaS**
+### 🛠️ Powered By **MrTOgRaS**
 
-[🌐 Website](https://www.mrtogras.com) &nbsp;|&nbsp; [📧 Email](mailto:destek@mrtogras.com) &nbsp;|&nbsp; [🐙 GitHub](https://github.com/MrTOgRaS)
+[🌐 Website](https://www.mrtogras.com) &nbsp;•&nbsp; [📧 Email](mailto:destek@mrtogras.com) &nbsp;•&nbsp; [🐙 GitHub](https://github.com/MrTOgRaS)
+
+<br />
+
+*Developed with passion for the audio community.*
 
 </div>
