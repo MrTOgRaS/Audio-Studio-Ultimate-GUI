@@ -3,11 +3,11 @@ const path = require("path");
 const fs = require("fs");
 const { exec, spawn } = require("child_process");
 
-const APP_VERSION = "1.1";
+const APP_VERSION = "1.2";
 let autoUpdater;try{autoUpdater=require("electron-updater").autoUpdater;autoUpdater.autoDownload=false;autoUpdater.autoInstallOnAppQuit=true}catch(e){autoUpdater=null}
 let mainWindow;
 const settingsPath = path.join(app.getPath("userData"), "settings.json");
-const DEFAULT_TOOLS = {TOOL_PATH:"eac3to.exe",QAAC_PATH:"qaac64.exe",FFMPEG_PATH:"ffmpeg.exe",FFPROBE_PATH:"ffprobe.exe",DEEW_PATH:"deew.exe",DEEZY_PATH:"deezy.exe",DGDEMUX_PATH:"DGDemux.exe",MKVEXTRACT_PATH:"mkvextract.exe",MKVMERGE_PATH:"mkvmerge.exe",Truehdd_PATH:"truehdd.exe",THDMerge_PATH:"thdmerge.exe",Dovi_Tool_PATH:"dovi_tool.exe",MediaInfo_PATH:"MediaInfo.exe",HDR10Plus_PATH:"hdr10plus_tool.exe",AtmosFix_PATH:"eac3_7.1_atmos_fix.exe",Tsmuxer_PATH:"tsmuxer.exe",DEE_PATH:"dee.exe",DTSEncoder_PATH:"DTSEncoder.jar",AudioSuite:"C:\\Audio Tools Suite\\Atmos\\binaries"};
+const DEFAULT_TOOLS = {TOOL_PATH:"eac3to.exe",QAAC_PATH:"qaac64.exe",FFMPEG_PATH:"ffmpeg.exe",FFPROBE_PATH:"ffprobe.exe",DEEW_PATH:"deew.exe",DEEZY_PATH:"deezy.exe",DGDEMUX_PATH:"DGDemux.exe",MKVEXTRACT_PATH:"mkvextract.exe",MKVMERGE_PATH:"mkvmerge.exe",Truehdd_PATH:"truehdd.exe",THDMerge_PATH:"thdmerge.exe",Dovi_Tool_PATH:"dovi_tool.exe",MediaInfo_PATH:"MediaInfo.exe",HDR10Plus_PATH:"hdr10plus_tool.exe",AtmosFix_PATH:"eac3_7.1_atmos_fix.exe",Tsmuxer_PATH:"tsmuxer.exe",DEE_PATH:"dee.exe",DTSEncoder_PATH:"DTSEncoder.jar",TWOLAME_PATH:"twolame.exe",LAME_PATH:"lame.exe",OPUSENC_PATH:"opusenc.exe",OPUSDEC_PATH:"opusdec.exe",AudioSuite:"C:\\Audio Tools Suite\\Atmos\\binaries"};
 
 // Icon: works in dev (__dirname/icon.ico) and packaged (resourcesPath/icon.ico)
 function getIconPath(){
@@ -73,8 +73,8 @@ ipcMain.handle("run-command-stream",(e,cmd,cwd,trackId)=>{
     const child=spawn(cmd,{shell:true,cwd:cwd||undefined,windowsHide:true,env:UTF8_ENV});
     if(trackId)trackProcess(trackId,child);
     let out="";
-    child.stdout.on("data",d=>{const s=d.toString();out+=s;mainWindow.webContents.send("stream-data",{id:trackId,data:s})});
-    child.stderr.on("data",d=>{const s=d.toString();out+=s;mainWindow.webContents.send("stream-data",{id:trackId,data:s})});
+    child.stdout.on("data",d=>{const s=d.toString().replace(/\r(?!\n)/g,"\n");out+=s;mainWindow.webContents.send("stream-data",{id:trackId,data:s})});
+    child.stderr.on("data",d=>{const s=d.toString().replace(/\r(?!\n)/g,"\n");out+=s;mainWindow.webContents.send("stream-data",{id:trackId,data:s})});
     child.on("close",code=>{if(trackId)activeProcesses.delete(trackId);resolve({success:code===0,exitCode:code,stdout:out,stderr:""})});
     child.on("error",err=>{if(trackId)activeProcesses.delete(trackId);resolve({success:false,error:err.message,stdout:out,stderr:""})});
   });
