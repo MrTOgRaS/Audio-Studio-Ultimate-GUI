@@ -1,6 +1,6 @@
 {
   "name": "audio-studio-ultimate",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "private": true,
   "author": "Murat Ogras",
   "description": "Audio Studio Ultimate GUI - Professional Audio Processing Tools",
@@ -48,10 +48,10 @@
       "createDesktopShortcut": true,
       "createStartMenuShortcut": true,
       "shortcutName": "Audio Studio Ultimate",
-      "artifactName": "Audio Studio Ultimate Setup 1.1.${ext}"
+      "artifactName": "Audio Studio Ultimate Setup 1.2.${ext}"
     },
     "portable": {
-      "artifactName": "Audio Studio Ultimate Portable 1.1.${ext}",
+      "artifactName": "Audio Studio Ultimate Portable 1.2.${ext}",
       "requestExecutionLevel": "user"
     },
     "publish": [{
