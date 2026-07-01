@@ -8,7 +8,7 @@
 [![React](https://img.shields.io/badge/React_19-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
 [![Platform](https://img.shields.io/badge/Windows_10%2F11-0078D6?style=for-the-badge&logo=windows&logoColor=white)](https://www.microsoft.com/windows)
-[![Version](https://img.shields.io/badge/Version-1.1-blue?style=for-the-badge)](https://github.com/MrTOgRaS/Audio-Studio-Ultimate-GUI/releases/latest)
+[![Version](https://img.shields.io/badge/Version-1.2-blue?style=for-the-badge)](https://github.com/MrTOgRaS/Audio-Studio-Ultimate-GUI/releases/latest)
 
 <br />
 
@@ -90,23 +90,43 @@ Built on **Electron 41** and **React 19**, it provides a responsive, native-feel
 >
 > **Default tool directory:** `C:\Audio Tools Suite 2026\`
 
+> 📌 **Important Note for DEEW & FFmpeg Integration:**
+> For the program to work properly with DEEW, FFmpeg is required. You can do one of the following:
+> 1. **Easiest:** Copy `ffmpeg.exe` into the same folder as `deew.exe`.
+> 2. **Add to PATH:** Add the folder containing `ffmpeg.exe` to your Windows System PATH.
+> *(System Properties → Advanced → Environment Variables → Path → Edit → New)*
+
 | Tool | Download | License |
 |---|---|---|
-| **FFmpeg** *(includes FFprobe)* | [GitHub Releases](https://github.com/BtbN/FFmpeg-Builds/releases) | MIT |
+| **FFmpeg** *(includes FFprobe)* | [GitHub Releases](https://github.com/BtbN/FFmpeg-Builds/releases) | GPL / LGPL |
 | **eac3to** | [RationalQM](https://www.rationalqm.us/eac3to/) | Freeware |
 | **QAAC** | [GitHub Releases](https://github.com/nu774/qaac/releases) | Public Domain |
+| **LAME & TwoLAME** | [LAME](https://lame.sourceforge.io/) / [TwoLAME](https://www.twolame.org/) | LGPL |
+| **Opus-Tools** | [Opus Codec](https://opus-codec.org/downloads/) | BSD |
 | **MKVToolNix** *(mkvextract, mkvmerge)* | [Official Downloads](https://mkvtoolnix.download/downloads.html) | GPL v2 |
-| **DEEW** | [GitHub](https://github.com/pcroland/deew) | MIT |
-| **DeeZy** | [GitHub](https://github.com/jessielw/DeeZy) | MIT |
+| **DEEW** | [GitHub](https://github.com/pcroland/deew) | GPL v3 |
+| **DeeZy** | [GitHub](https://github.com/Draz1l/DeeZy) | GPL v3 |
 | **DGDemux** | [Official Site](https://www.rationalqm.us/dgdemux/dgdemux.html) | Freeware |
 | **MediaInfo** | [Official Downloads](https://mediaarea.net/en/MediaInfo/Download) | BSD |
-| **DTS Master Audio Suite** *(DTSEncoder.jar)* | DTS Professional | 💰 Commercial |
+| **DTS Master Audio Suite** *(DTSEncoder.jar)* | DTS Professional | Commercial |
 | **dovi_tool** | [GitHub Releases](https://github.com/quietvoid/dovi_tool/releases) | MIT |
 | **hdr10plus_tool** | [GitHub Releases](https://github.com/quietvoid/hdr10plus_tool/releases) | MIT |
 | **tsMuxeR** | [GitHub Releases](https://github.com/justdan96/tsMuxer/releases) | Apache 2.0 |
 | **truehdd** | [GitHub Releases](https://github.com/truehdd/truehdd) | Apache 2.0 |
 | **Apple CoreAudioToolbox** | Install [iTunes](https://www.apple.com/itunes/) or Apple Application Support | Apple EULA |
 | **Dolby Encoding Engine (Buy)** | [Dolby Professional Support](https://professionalsupport.dolby.com/s/topic/0TO4u000000ey3AGAQ/dolby-encoding-engine-dee?language=en_US) | 💰 Commercial |
+
+> **📌 Dolby Encoding Engine (DEE) Path:**
+> ```text
+> C:\dee\dee.exe
+> ```
+> If DEE does not work, make sure the path is correctly set in the app's **Settings** panel. DEE requires a valid **Dolby license** — without it, encoding will fail. As a free alternative, the app will automatically fall back to **DEEW** or **FFmpeg** for supported formats.
+
+> **📌 DTS Master Audio Suite Path:**
+> ```text
+> C:\Program Files (x86)\DTS\MAS-SAS\DTSEncoder.jar
+> ```
+> DTSEncoder.jar requires Java to be installed. The encoder must be run from its installation directory (the app handles this automatically).
 
 ---
 
@@ -215,6 +235,18 @@ SOFTWARE.
 >
 > **Varsayılan araç dizini:** `C:\Audio Tools Suite 2026\`
 
+> 📌 **DEEW ve FFmpeg İçin Önemli Not:**
+> Programın DEEW ile sorunsuz çalışabilmesi için FFmpeg gereklidir. Şunlardan birini yapabilirsiniz:
+> 1. **En Kolayı:** `ffmpeg.exe` dosyasını `deew.exe` ile aynı klasöre kopyalayın.
+> 2. **PATH'e Ekle:** Windows'ta `ffmpeg.exe`'nin bulunduğu klasörü sistem PATH'ine ekleyin.
+> *(Sistem Özellikleri → Gelişmiş → Ortam Değişkenleri → Path → Düzenle → Yeni)*
+
+### 🧰 Gerekli Araçlar
+
+> ⚠️ **Önemli:** Aşağıdaki araçlar uygulama ile birlikte **gelmemektedir**. Her birini ayrı ayrı indirmeniz gerekmektedir. Araçları sistem `PATH`'inize ekleyin veya uygulama içindeki **Ayarlar** panelinden yollarını yapılandırın.
+>
+> **Varsayılan araç dizini:** `C:\Audio Tools Suite 2026\`
+
 | Araç | İndirme | Lisans |
 |---|---|---|
 | **FFmpeg** *(FFprobe dahil)* | [GitHub Releases](https://github.com/BtbN/FFmpeg-Builds/releases) | MIT |
@@ -232,6 +264,18 @@ SOFTWARE.
 | **truehdd** | [GitHub Releases](https://github.com/truehdd/truehdd) | Apache 2.0 |
 | **Apple CoreAudioToolbox** | [iTunes](https://www.apple.com/itunes/) veya Apple Application Support yükleyin | Apple EULA |
 | **Dolby Encoding Engine (Satın Al)** | [Dolby Professional Support](https://professionalsupport.dolby.com/s/topic/0TO4u000000ey3AGAQ/dolby-encoding-engine-dee?language=en_US) | 💰 Ticari |
+
+> **📌 Dolby Encoding Engine (DEE) Yolu:**
+> ```text
+> C:\dee\dee.exe
+> ```
+> DEE çalışmıyorsa, uygulamanın **Ayarlar** panelinden yolun doğru ayarlandığından emin olun. DEE geçerli bir **Dolby lisansı** gerektirir — lisans olmadan kodlama başarısız olur. Ücretsiz alternatif olarak, uygulama desteklenen formatlar için otomatik olarak **DEEW** veya **FFmpeg**'e geçiş yapar.
+
+> **📌 DTS Master Audio Suite Yolu:**
+> ```text
+> C:\Program Files (x86)\DTS\MAS-SAS\DTSEncoder.jar
+> ```
+> DTSEncoder.jar için Java'nın yüklü olması gerekir. Kodlayıcı kurulum dizininden çalıştırılmalıdır (uygulama bunu otomatik halleder).
 
 ---
 
